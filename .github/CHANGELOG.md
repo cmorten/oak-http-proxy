@@ -1,8 +1,12 @@
 # ChangeLog
 
+## [1.0.3] - 26-08-2020
+
+- fix: deno.land/x registry no longer supports mixed case.
+
 ## [1.0.2] - 26-08-2020
 
-- docs: use support module name format for deno.land/x registry.
+- fix: use supported module name format for deno.land/x registry.
 
 ## [1.0.1] - 26-08-2020
 
