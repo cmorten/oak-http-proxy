@@ -1,5 +1,9 @@
 # ChangeLog
 
+## [1.0.2] - 26-08-2020
+
+- docs: use support module name format for deno.land/x registry.
+
 ## [1.0.1] - 26-08-2020
 
 - docs: readme typo for nest.land.
