@@ -31,7 +31,7 @@ import { proxy } from "https://deno.land/x/oak-http-proxy@1.0.0/mod.ts";
 oak-http-proxy is also available on [nest.land](https://nest.land/package/oak-http-proxy), a package registry for Deno on the Blockchain.
 
 ```ts
-import { opine } from "https://x.nest.land/oak-http-proxy@1.0.0/mod.ts";
+import { proxy } from "https://x.nest.land/oak-http-proxy@1.0.0/mod.ts";
 ```
 
 ## Docs
