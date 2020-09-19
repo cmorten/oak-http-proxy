@@ -1,4 +1,4 @@
-import { ProxyState } from "../../deps.ts";
+import type { ProxyState } from "../../deps.ts";
 
 export function sendSrcRes(state: ProxyState) {
   state.src.res.body = state.proxy.resData;

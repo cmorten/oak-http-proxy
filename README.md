@@ -6,8 +6,8 @@ Proxy middleware for Deno Oak HTTP servers.
 ![GitHub stars](https://img.shields.io/github/stars/asos-craigmorten/oak-http-proxy) ![GitHub forks](https://img.shields.io/github/forks/asos-craigmorten/oak-http-proxy) ![oak-http-proxy License](https://img.shields.io/github/license/asos-craigmorten/oak-http-proxy) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/asos-craigmorten/oak-http-proxy/graphs/commit-activity) [![HitCount](http://hits.dwyl.com/asos-craigmorten/oak-http-proxy.svg)](http://hits.dwyl.com/asos-craigmorten/oak-http-proxy)
 
 ```ts
-import { proxy } from "https://deno.land/x/oak_http_proxy@1.0.3/mod.ts";
-import { Application } from "https://deno.land/x/oak@v6.0.2/mod.ts";
+import { proxy } from "https://deno.land/x/oak_http_proxy@1.1.0/mod.ts";
+import { Application } from "https://deno.land/x/oak@v6.2.0/mod.ts";
 
 const app = new Application();
 
@@ -25,13 +25,13 @@ Before importing, [download and install Deno](https://deno.land/#installation).
 You can then import oak-http-proxy straight into your project:
 
 ```ts
-import { proxy } from "https://deno.land/x/oak_http_proxy@1.0.3/mod.ts";
+import { proxy } from "https://deno.land/x/oak_http_proxy@1.1.0/mod.ts";
 ```
 
 oak-http-proxy is also available on [nest.land](https://nest.land/package/oak-http-proxy), a package registry for Deno on the Blockchain.
 
 ```ts
-import { proxy } from "https://x.nest.land/oak-http-proxy@1.0.3/mod.ts";
+import { proxy } from "https://x.nest.land/oak-http-proxy@1.1.0/mod.ts";
 ```
 
 ## Docs

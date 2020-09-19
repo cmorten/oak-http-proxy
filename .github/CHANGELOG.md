@@ -1,5 +1,9 @@
 # ChangeLog
 
+## [1.1.0] - 19-09-2020
+
+- feat: Support Deno 1.4.1 and std 0.70.0
+
 ## [1.0.3] - 26-08-2020
 
 - fix: deno.land/x registry no longer supports mixed case.
