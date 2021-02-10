@@ -1,4 +1,4 @@
-import type { ProxyState, ProxyOptions } from "../deps.ts";
+import type { ProxyOptions, ProxyState } from "../deps.ts";
 
 export function parseUrl(state: ProxyState, ctx: any) {
   const req = state.src.req;

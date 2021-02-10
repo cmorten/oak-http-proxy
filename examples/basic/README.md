@@ -13,7 +13,7 @@ deno run --allow-net --allow-read ./examples/proxy/index.ts
 if have the repo cloned locally _OR_
 
 ```bash
-deno run --allow-net --allow-read https://deno.land/x/oak_http_proxy@1.1.1/examples/basic/index.ts
+deno run --allow-net --allow-read https://deno.land/x/oak_http_proxy@1.2.0/examples/basic/index.ts
 ```
 
 if you don't!

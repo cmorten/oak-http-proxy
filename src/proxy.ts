@@ -1,14 +1,14 @@
 import {
+  createState,
+  decorateProxyReqInit,
+  decorateProxyReqUrl,
+  decorateSrcRes,
+  decorateSrcResHeaders,
+  filterProxyRes,
+  prepareProxyReq,
   ProxyOptions,
   ProxyUrlFunction,
-  createState,
-  decorateProxyReqUrl,
-  decorateProxyReqInit,
-  prepareProxyReq,
   sendProxyReq,
-  filterProxyRes,
-  decorateSrcResHeaders,
-  decorateSrcRes,
 } from "../deps.ts";
 import { filterSrcReq } from "./steps/filterSrcReq.ts";
 import { buildProxyUrl } from "./steps/buildProxyUrl.ts";

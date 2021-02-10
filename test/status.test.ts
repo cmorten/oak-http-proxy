@@ -1,5 +1,5 @@
 import { describe, it } from "./support/utils.ts";
-import { superoak, Opine, Oak, expect } from "./deps.ts";
+import { expect, Oak, Opine, superoak } from "./deps.ts";
 import { proxy } from "../mod.ts";
 
 const { opine } = Opine;

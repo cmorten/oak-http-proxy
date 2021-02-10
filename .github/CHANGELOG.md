@@ -1,5 +1,9 @@
 # ChangeLog
 
+## [1.2.0] - 10-02-2021
+
+- feat: Support Deno 1.7.2 and std 0.85.0
+
 ## [1.1.1] - 19-09-2020
 
 - chore: upgrade to eggs@0.2.2 in CI

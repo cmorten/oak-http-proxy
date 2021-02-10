@@ -1,4 +1,4 @@
-import { Server, Opine } from "../deps.ts";
+import { Opine } from "../deps.ts";
 
 const { opine, json, urlencoded } = Opine;
 
@@ -7,7 +7,7 @@ export function proxyTarget(
     port?: number;
     handlers?: any;
   } = { port: 0 },
-): Server {
+) {
   const target = opine();
 
   target.use(urlencoded());

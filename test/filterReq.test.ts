@@ -1,6 +1,6 @@
 import { describe, it } from "./support/utils.ts";
 import { proxyTarget } from "./support/proxyTarget.ts";
-import { superoak, Oak } from "./deps.ts";
+import { Oak, superoak } from "./deps.ts";
 import { proxy } from "../mod.ts";
 
 const { Application } = Oak;
