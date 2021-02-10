@@ -68,6 +68,12 @@
 				<p>Proxy middleware for Deno Oak HTTP servers.</p>
 				<p><a href="https://github.com/asos-craigmorten/oak-http-proxy/tags/"><img src="https://img.shields.io/github/tag/asos-craigmorten/oak-http-proxy" alt="GitHub tag"></a> <img src="https://github.com/asos-craigmorten/oak-http-proxy/workflows/Test/badge.svg" alt="Test"> <a href="https://doc.deno.land/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://doc.deno.land/badge.svg" alt="deno doc"></a> <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a> <a href="https://img.shields.io/github/issues/asos-craigmorten/oak-http-proxy"><img src="https://img.shields.io/github/issues/asos-craigmorten/oak-http-proxy" alt="GitHub issues"></a>
 				<img src="https://img.shields.io/github/stars/asos-craigmorten/oak-http-proxy" alt="GitHub stars"> <img src="https://img.shields.io/github/forks/asos-craigmorten/oak-http-proxy" alt="GitHub forks"> <img src="https://img.shields.io/github/license/asos-craigmorten/oak-http-proxy" alt="oak-http-proxy License"> <a href="https://GitHub.com/asos-craigmorten/oak-http-proxy/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance"></a> <a href="http://hits.dwyl.com/asos-craigmorten/oak-http-proxy"><img src="http://hits.dwyl.com/asos-craigmorten/oak-http-proxy.svg" alt="HitCount"></a></p>
+				<p align="left">
+					<a href="https://deno.land/x/oak-http-proxy"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy latest /x/ version" /></a>
+					<a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak-http-proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fdep-count%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy dependency count" /></a>
+					<a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak-http-proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fupdates%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy dependency outdatedness" /></a>
+					<a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak-http-proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fcache-size%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy cached size" /></a>
+				</p>
 				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak_http_proxy@1.2.0/mod.ts&quot;</span>;
 <span class="hljs-keyword">import</span> { Application } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak@v6.5.0/mod.ts&quot;</span>;
 
@@ -75,16 +81,19 @@
 
 app.use(proxy(<span class="hljs-string">&quot;https://github.com/oakserver/oak&quot;</span>));
 
-<span class="hljs-keyword">await</span> app.listen({ port: <span class="hljs-number">3000</span> });</code></pre>
+<span class="hljs-keyword">await</span> app.listen({ <span class="hljs-attr">port</span>: <span class="hljs-number">3000</span> });
+</code></pre>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 					<h2>Installation</h2>
 				</a>
 				<p>This is a <a href="https://deno.land/">Deno</a> module available to import direct from this repo and via the <a href="https://deno.land/x">Deno Registry</a>.</p>
 				<p>Before importing, <a href="https://deno.land/#installation">download and install Deno</a>.</p>
 				<p>You can then import oak-http-proxy straight into your project:</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak_http_proxy@1.2.0/mod.ts&quot;</span>;</code></pre>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak_http_proxy@1.2.0/mod.ts&quot;</span>;
+</code></pre>
 				<p>oak-http-proxy is also available on <a href="https://nest.land/package/oak-http-proxy">nest.land</a>, a package registry for Deno on the Blockchain.</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://x.nest.land/oak-http-proxy@1.2.0/mod.ts&quot;</span>;</code></pre>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://x.nest.land/oak-http-proxy@1.2.0/mod.ts&quot;</span>;
+</code></pre>
 				<a href="#docs" id="docs" style="color: inherit; text-decoration: none;">
 					<h2>Docs</h2>
 				</a>
@@ -105,13 +114,15 @@ app.use(proxy(<span class="hljs-string">&quot;https://github.com/oakserver/oak&q
 
 router.get(<span class="hljs-string">&quot;/url&quot;</span>, proxy(<span class="hljs-keyword">new</span> URL(<span class="hljs-string">&quot;http://google.com&quot;</span>)));
 
-router.get(<span class="hljs-string">&quot;/function&quot;</span>, proxy(<span class="hljs-function">(<span class="hljs-params">ctx</span>) =&gt;</span> <span class="hljs-keyword">new</span> URL(<span class="hljs-string">&quot;http://google.com&quot;</span>)));</code></pre>
+router.get(<span class="hljs-string">&quot;/function&quot;</span>, proxy(<span class="hljs-function">(<span class="hljs-params">ctx</span>) =&gt;</span> <span class="hljs-keyword">new</span> URL(<span class="hljs-string">&quot;http://google.com&quot;</span>)));
+</code></pre>
 				<p>Note: Unmatched path segments of the incoming request url <em>are not</em> transferred to the outbound proxy URL. For dynamic proxy urls use the function form.</p>
 				<a href="#proxy-options" id="proxy-options" style="color: inherit; text-decoration: none;">
 					<h3>Proxy Options</h3>
 				</a>
 				<p>You can also provide several options which allow you to filter, customize and decorate proxied requests and responses.</p>
-				<pre><code class="language-ts">app.use(proxy(<span class="hljs-string">&quot;http://google.com&quot;</span>, proxyOptions));</code></pre>
+				<pre><code class="language-ts">app.use(proxy(<span class="hljs-string">&quot;http://google.com&quot;</span>, proxyOptions));
+</code></pre>
 				<a href="#filterreqreq-res-supports-promises" id="filterreqreq-res-supports-promises" style="color: inherit; text-decoration: none;">
 					<h4>filterReq(req, res) (supports Promises)</h4>
 				</a>
@@ -120,21 +131,23 @@ router.get(<span class="hljs-string">&quot;/function&quot;</span>, proxy(<span c
 				<pre><code class="language-ts">app.use(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
-    filterReq: <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
+    <span class="hljs-attr">filterReq</span>: <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
       <span class="hljs-keyword">return</span> req.method === <span class="hljs-string">&quot;GET&quot;</span>;
     },
   })
-);</code></pre>
+);
+</code></pre>
 				<p>Promise form:</p>
 				<pre><code class="language-ts">app.use(
   proxy(<span class="hljs-string">&quot;localhost:12346&quot;</span>, {
-    filterReq: <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
+    <span class="hljs-attr">filterReq</span>: <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> {
         resolve(req.method === <span class="hljs-string">&quot;GET&quot;</span>);
       });
     },
   })
-);</code></pre>
+);
+</code></pre>
 				<a href="#srcresdecoratorreq-res-proxyres-proxyresdata-supports-promise" id="srcresdecoratorreq-res-proxyres-proxyresdata-supports-promise" style="color: inherit; text-decoration: none;">
 					<h4>srcResDecorator(req, res, proxyRes, proxyResData) (supports Promise)</h4>
 				</a>
@@ -142,17 +155,18 @@ router.get(<span class="hljs-string">&quot;/function&quot;</span>, proxy(<span c
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
-    srcResDecorator: <span class="hljs-function">(<span class="hljs-params">req, res, proxyRes, proxyResData</span>) =&gt;</span> {
+    <span class="hljs-attr">srcResDecorator</span>: <span class="hljs-function">(<span class="hljs-params">req, res, proxyRes, proxyResData</span>) =&gt;</span> {
       data = <span class="hljs-built_in">JSON</span>.parse(proxyResData.toString(<span class="hljs-string">&quot;utf8&quot;</span>));
       data.newProperty = <span class="hljs-string">&quot;exciting data&quot;</span>;
 
       <span class="hljs-keyword">return</span> <span class="hljs-built_in">JSON</span>.stringify(data);
     },
   })
-);</code></pre>
+);
+</code></pre>
 				<pre><code class="language-ts">app.use(
   proxy(<span class="hljs-string">&quot;httpbin.org&quot;</span>, {
-    srcResDecorator: <span class="hljs-function">(<span class="hljs-params">req, res, proxyRes, proxyResData</span>) =&gt;</span> {
+    <span class="hljs-attr">srcResDecorator</span>: <span class="hljs-function">(<span class="hljs-params">req, res, proxyRes, proxyResData</span>) =&gt;</span> {
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> {
         proxyResData.message = <span class="hljs-string">&quot;Hello Deno!&quot;</span>;
 
@@ -162,7 +176,8 @@ router.get(<span class="hljs-string">&quot;/function&quot;</span>, proxy(<span c
       });
     },
   })
-);</code></pre>
+);
+</code></pre>
 				<a href="#304---not-modified" id="304---not-modified" style="color: inherit; text-decoration: none;">
 					<h5>304 - Not Modified</h5>
 				</a>
@@ -189,9 +204,10 @@ router.get(<span class="hljs-string">&quot;/function&quot;</span>, proxy(<span c
 
 app.use(
   proxy(getUrl, {
-    memoizeUrl: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">memoizeUrl</span>: <span class="hljs-literal">false</span>,
   })
-);</code></pre>
+);
+</code></pre>
 				<p>In this example, when <code>memoizeUrl: false</code>, the coinToss occurs on each request, and each request could get either value.</p>
 				<p>Conversely, When <code>memoizeUrl: true</code>, the coinToss would occur on the first request, and all additional requests would return the value resolved on the first request.</p>
 				<a href="#srcresheaderdecorator" id="srcresheaderdecorator" style="color: inherit; text-decoration: none;">
@@ -201,11 +217,12 @@ app.use(
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
-    srcResHeaderDecorator(headers, req, res, proxyReq, proxyRes) {
+    <span class="hljs-function"><span class="hljs-title">srcResHeaderDecorator</span>(<span class="hljs-params">headers, req, res, proxyReq, proxyRes</span>)</span> {
       <span class="hljs-keyword">return</span> headers;
     },
   })
-);</code></pre>
+);
+</code></pre>
 				<a href="#filterresproxyres-proxyresdata-supports-promise-form" id="filterresproxyres-proxyresdata-supports-promise-form" style="color: inherit; text-decoration: none;">
 					<h4>filterRes(proxyRes, proxyResData) (supports Promise form)</h4>
 				</a>
@@ -213,11 +230,12 @@ app.use(
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
-    filterRes(proxyRes) {
+    <span class="hljs-function"><span class="hljs-title">filterRes</span>(<span class="hljs-params">proxyRes</span>)</span> {
       <span class="hljs-keyword">return</span> proxyRes.status === <span class="hljs-number">404</span>;
     },
   })
-);</code></pre>
+);
+</code></pre>
 				<a href="#proxyerrorhandler" id="proxyerrorhandler" style="color: inherit; text-decoration: none;">
 					<h3>proxyErrorHandler</h3>
 				</a>
@@ -227,7 +245,7 @@ app.use(
 
 app.use(
   proxy(<span class="hljs-string">&quot;localhost:12346&quot;</span>, {
-    proxyErrorHandler(err, ctx, next) {
+    <span class="hljs-function"><span class="hljs-title">proxyErrorHandler</span>(<span class="hljs-params">err, ctx, next</span>)</span> {
       ctx.throw(err);
     },
   })
@@ -237,7 +255,7 @@ app.use(
 
 app.use(
   proxy(<span class="hljs-string">&quot;localhost:12346&quot;</span>, {
-    proxyErrorHandler(err, ctx, next) {
+    <span class="hljs-function"><span class="hljs-title">proxyErrorHandler</span>(<span class="hljs-params">err, ctx, next</span>)</span> {
       <span class="hljs-keyword">switch</span> (err &amp;&amp; err.code) {
         <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;ECONNRESET&quot;</span>: {
           ctx.response.status = <span class="hljs-number">405</span>;
@@ -249,13 +267,14 @@ app.use(
 
           <span class="hljs-keyword">return</span>;
         }
-        <span class="hljs-keyword">default</span>: {
+        <span class="hljs-attr">default</span>: {
           ctx.throw(err)
         }
       }
     },
   })
-);</code></pre>
+);
+</code></pre>
 				<a href="#proxyrequrldecoratorurl-req-supports-promise-form" id="proxyrequrldecoratorurl-req-supports-promise-form" style="color: inherit; text-decoration: none;">
 					<h4>proxyReqUrlDecorator(url, req) (supports Promise form)</h4>
 				</a>
@@ -264,18 +283,19 @@ app.use(
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
-    proxyReqUrlDecorator(url, req) {
+    <span class="hljs-function"><span class="hljs-title">proxyReqUrlDecorator</span>(<span class="hljs-params">url, req</span>)</span> {
       url.pathname = <span class="hljs-string">&quot;/&quot;</span>;
 
       <span class="hljs-keyword">return</span> url;
     },
   })
-);</code></pre>
+);
+</code></pre>
 				<p>You can also use Promises:</p>
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;localhost:3000&quot;</span>, {
-    proxyReqOptDecorator(url, req) {
+    <span class="hljs-function"><span class="hljs-title">proxyReqOptDecorator</span>(<span class="hljs-params">url, req</span>)</span> {
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
         <span class="hljs-keyword">if</span> (url.pathname === <span class="hljs-string">&quot;/login&quot;</span>) {
           url.port = <span class="hljs-number">8080</span>;
@@ -285,7 +305,8 @@ app.use(
       });
     },
   })
-);</code></pre>
+);
+</code></pre>
 				<p>Generally it is advised to use the function form for the passed URL argument as this provides the full context object whereas the <code>proxyReqOptDecorator</code> passes only the <code>context.request</code> object.</p>
 				<p>Potential use cases for <code>proxyReqOptDecorator</code> include:</p>
 				<ul>
@@ -300,7 +321,7 @@ app.use(
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
-    proxyReqInitDecorator(proxyReqOpts, srcReq) {
+    <span class="hljs-function"><span class="hljs-title">proxyReqInitDecorator</span>(<span class="hljs-params">proxyReqOpts, srcReq</span>)</span> {
       <span class="hljs-comment">// you can update headers</span>
       proxyReqOpts.headers.set(<span class="hljs-string">&quot;Content-Type&quot;</span>, <span class="hljs-string">&quot;text/html&quot;</span>);
       <span class="hljs-comment">// you can change the method</span>
@@ -309,12 +330,13 @@ app.use(
       <span class="hljs-keyword">return</span> proxyReqOpts;
     },
   })
-);</code></pre>
+);
+</code></pre>
 				<p>You can also use Promises:</p>
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
-    proxyReqOptDecorator(proxyReqOpts, srcReq) {
+    <span class="hljs-function"><span class="hljs-title">proxyReqOptDecorator</span>(<span class="hljs-params">proxyReqOpts, srcReq</span>)</span> {
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
         proxyReqOpts.headers.set(<span class="hljs-string">&quot;Content-Type&quot;</span>, <span class="hljs-string">&quot;text/html&quot;</span>);
 
@@ -322,7 +344,8 @@ app.use(
       });
     },
   })
-);</code></pre>
+);
+</code></pre>
 				<a href="#secure" id="secure" style="color: inherit; text-decoration: none;">
 					<h4>secure</h4>
 				</a>
@@ -330,9 +353,10 @@ app.use(
 				<pre><code class="language-ts">app.use(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;http://www.google.com&quot;</span>, {
-    secure: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">secure</span>: <span class="hljs-literal">true</span>,
   })
-);</code></pre>
+);
+</code></pre>
 				<p>Note: if the proxy is passed a url without a protocol then HTTP will be used by default unless overridden by this option.</p>
 				<a href="#preservehostheader" id="preservehostheader" style="color: inherit; text-decoration: none;">
 					<h4>preserveHostHeader</h4>
@@ -341,9 +365,10 @@ app.use(
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
-    preserveHostHeader: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">preserveHostHeader</span>: <span class="hljs-literal">true</span>,
   })
-);</code></pre>
+);
+</code></pre>
 				<a href="#parsereqbody" id="parsereqbody" style="color: inherit; text-decoration: none;">
 					<h4>parseReqBody</h4>
 				</a>
@@ -356,9 +381,10 @@ app.use(
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
-    reqAsBuffer: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">reqAsBuffer</span>: <span class="hljs-literal">true</span>,
   })
-);</code></pre>
+);
+</code></pre>
 				<a href="#reqbodyencoding" id="reqbodyencoding" style="color: inherit; text-decoration: none;">
 					<h4>reqBodyEncoding</h4>
 				</a>
@@ -367,9 +393,10 @@ app.use(
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/post&quot;</span>,
   proxy(<span class="hljs-string">&quot;httpbin.org&quot;</span>, {
-    reqBodyEncoding: <span class="hljs-string">&quot;utf-8&quot;</span>,
+    <span class="hljs-attr">reqBodyEncoding</span>: <span class="hljs-string">&quot;utf-8&quot;</span>,
   })
-);</code></pre>
+);
+</code></pre>
 				<a href="#timeout" id="timeout" style="color: inherit; text-decoration: none;">
 					<h4>timeout</h4>
 				</a>
@@ -379,9 +406,10 @@ app.use(
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/&quot;</span>,
   proxy(<span class="hljs-string">&quot;httpbin.org&quot;</span>, {
-    timeout: <span class="hljs-number">2000</span>, <span class="hljs-comment">// in milliseconds, two seconds</span>
+    <span class="hljs-attr">timeout</span>: <span class="hljs-number">2000</span>, <span class="hljs-comment">// in milliseconds, two seconds</span>
   })
-);</code></pre>
+);
+</code></pre>
 				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
 					<h2>Contributing</h2>
 				</a>
