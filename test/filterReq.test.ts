@@ -18,9 +18,12 @@ function nextMethod(ctx: any, next: any) {
   ctx.response.body = "Client Application";
 }
 
-async function nextMethodThatReliesOnPrivateStatesOfOak(ctx: Oak.Context, next: any) {
-    await ctx.send({root: `${Deno.cwd()}/test`, index: "index.test.html"});
-    ctx.response.status = 201;
+async function nextMethodThatReliesOnPrivateStatesOfOak(
+  ctx: Oak.Context,
+  next: any,
+) {
+  await ctx.send({ root: `${Deno.cwd()}/test`, index: "index.test.html" });
+  ctx.response.status = 201;
 }
 
 describe("filterReq", () => {
