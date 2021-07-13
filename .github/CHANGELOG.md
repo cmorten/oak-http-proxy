@@ -1,5 +1,9 @@
 # ChangeLog
 
+## [1.4.1] - 13-07-2021
+
+- fix: filterReq crashes send middleware (#3)
+
 ## [1.4.0] - 13-07-2021
 
 - feat: Support Deno `1.12.0` and std `0.101.0`
