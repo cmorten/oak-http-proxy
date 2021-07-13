@@ -69,7 +69,7 @@ export function proxy(
 
           resolver(err, ctx, next);
         } else {
-          next();
+          return next();
         }
       });
   };
