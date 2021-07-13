@@ -7,13 +7,13 @@ Proxy middleware for Deno Oak HTTP servers.
 
 <p align="left">
    <a href="https://deno.land/x/oak_http_proxy"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy latest /x/ version" /></a>
-   <a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak-http-proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fdep-count%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy dependency count" /></a>
-   <a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak-http-proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fupdates%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy dependency outdatedness" /></a>
-   <a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak-http-proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fcache-size%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy cached size" /></a>
+   <a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fdep-count%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy dependency count" /></a>
+   <a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fupdates%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy dependency outdatedness" /></a>
+   <a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fcache-size%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy cached size" /></a>
 </p>
 
 ```ts
-import { proxy } from "https://deno.land/x/oak_http_proxy@1.3.0/mod.ts";
+import { proxy } from "https://deno.land/x/oak_http_proxy@1.4.0/mod.ts";
 import { Application } from "https://deno.land/x/oak@v6.5.0/mod.ts";
 
 const app = new Application();
@@ -32,13 +32,13 @@ Before importing, [download and install Deno](https://deno.land/#installation).
 You can then import oak-http-proxy straight into your project:
 
 ```ts
-import { proxy } from "https://deno.land/x/oak_http_proxy@1.3.0/mod.ts";
+import { proxy } from "https://deno.land/x/oak_http_proxy@1.4.0/mod.ts";
 ```
 
 oak-http-proxy is also available on [nest.land](https://nest.land/package/oak-http-proxy), a package registry for Deno on the Blockchain.
 
 ```ts
-import { proxy } from "https://x.nest.land/oak-http-proxy@1.3.0/mod.ts";
+import { proxy } from "https://x.nest.land/oak-http-proxy@1.4.0/mod.ts";
 ```
 
 ## Docs

@@ -5,9 +5,9 @@ export const TEST_TIMEOUT = 3000;
 
 /**
  * A no-op _describe_ method.
- * 
- * @param name 
- * @param fn 
+ *
+ * @param name
+ * @param fn
  */
 export async function describe(name: string, fn: () => void | Promise<void>) {
   fn();
@@ -15,9 +15,9 @@ export async function describe(name: string, fn: () => void | Promise<void>) {
 
 /**
  * An _it_ wrapper around `Deno.test`.
- * 
- * @param name 
- * @param fn 
+ *
+ * @param name
+ * @param fn
  */
 export async function it(
   name: string,
@@ -30,7 +30,7 @@ export async function it(
     let race: Promise<unknown> = Promise.resolve();
 
     if (fn.length === 1) {
-      let resolve: () => void;
+      let resolve: (value: unknown) => void;
       const donePromise = new Promise((r) => {
         resolve = r;
       });
@@ -52,7 +52,7 @@ export async function it(
 
       done = (err?: any) => {
         clearTimeout(timeoutId);
-        resolve();
+        resolve(undefined);
         if (err) throw err;
       };
     }

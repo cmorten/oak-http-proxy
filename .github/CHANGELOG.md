@@ -1,5 +1,9 @@
 # ChangeLog
 
+## [1.4.0] - 13-07-2021
+
+- feat: Support Deno `1.12.0` and std `0.101.0`
+
 ## [1.3.0] - 26-04-2021
 
 - feat: Support Deno `1.9.2` and std `0.95.0`

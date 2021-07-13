@@ -5,7 +5,7 @@
  * 
  *    if have the repo cloned locally OR
  * 
- *    deno run --allow-net https://deno.land/x/oak-http-proxy@1.3.0/examples/basic/index.ts
+ *    deno run --allow-net https://deno.land/x/oak_http_proxy@1.4.0/examples/basic/index.ts
  * 
  *    if you don't!
  * 

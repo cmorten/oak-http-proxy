@@ -23,19 +23,19 @@ import { handleProxyErrors } from "./steps/handleProxyErrors.ts";
  * remaining path from a request that has not been matched by
  * Oak will be appended to the provided url when making the
  * proxy request.
- * 
+ *
  * Also accepts optional options configuration allowing the user
  * to modified all aspects of proxied request via option
  * properties or a series of hooks allowing decoration of the
  * outbound request and the inbound response objects.
- * 
+ *
  * Requests and responses can also be filtered via the `filterReq`
  * and `filterRes` function options, allowing requests to bypass
  * the proxy.
- * 
+ *
  * @param {string|URL|ProxyUrlFunction} url
- * @param {ProxyOptions} options 
- * 
+ * @param {ProxyOptions} options
+ *
  * @returns {Function} Oak proxy middleware
  * @public
  */
