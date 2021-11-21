@@ -13,6 +13,6 @@ export function handleProxyErrors(err: any, ctx: any) {
   if (err && err.code === "ECONNRESET" || err.code === "ECONTIMEDOUT") {
     connectionResetHandler(ctx);
   } else {
-    ctx.throw(err);
+    ctx.throw(err.status, err.message);
   }
 }

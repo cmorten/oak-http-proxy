@@ -14,9 +14,7 @@ const proxyRoutes = [
 
 describe("url: string", () => {
   proxyRoutes.forEach((path) => {
-    it(`should work independently of "${path}" from the inbound request to proxy to the remote server (url: string)`, async (
-      done,
-    ) => {
+    it(`should work independently of "${path}" from the inbound request to proxy to the remote server (url: string)`, async (done) => {
       const proxyRouteFn = {
         method: "get",
         path: "/",
@@ -49,9 +47,7 @@ describe("url: string", () => {
 
 describe("url: URL", () => {
   proxyRoutes.forEach((path) => {
-    it(`should use the unmatched path component of "${path}" from the inbound request to proxy to the remote server (url: URL)`, async (
-      done,
-    ) => {
+    it(`should use the unmatched path component of "${path}" from the inbound request to proxy to the remote server (url: URL)`, async (done) => {
       const proxyRouteFn = {
         method: "get",
         path: "/",
@@ -93,8 +89,8 @@ describe("url: function", () => {
     const firstPort = 10031;
     const secondPort = 10032;
 
-    firstProxyApp.use("/", (req, res) => res.sendStatus(204));
-    secondProxyApp.use("/", (req, res) => res.sendStatus(200));
+    firstProxyApp.use("/", (_req, res) => res.sendStatus(204));
+    secondProxyApp.use("/", (_req, res) => res.sendStatus(200));
 
     const firstServer = firstProxyApp.listen(firstPort);
     const secondServer = secondProxyApp.listen(secondPort);

@@ -25,13 +25,11 @@ const STATUS_CODES = [
 
 describe("when server responds with an error", () => {
   STATUS_CODES.forEach((statusCode) => {
-    it(`oak-http-proxy responds with ${statusCode.text} when proxy server responds ${statusCode.code}`, async (
-      done,
-    ) => {
+    it(`oak-http-proxy responds with ${statusCode.text} when proxy server responds ${statusCode.code}`, async (done) => {
       // Create a server to proxy through to.
       // Using Opine as simpler to retrieve the target port than Oak.
       const target = opine();
-      target.use(function (req, res) {
+      target.use(function (_req, res) {
         res.sendStatus(statusCode.code);
       });
       const targetServer = target.listen(0);

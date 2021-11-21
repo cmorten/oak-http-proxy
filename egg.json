@@ -1,14 +1,13 @@
 {
     "name": "oak-http-proxy",
     "description": "Proxy middleware for Deno Oak HTTP servers.",
-    "version": "1.4.1",
+    "version": "2.0.0",
     "repository": "https://github.com/asos-craigmorten/oak-http-proxy",
     "stable": true,
     "files": [
         "./mod.ts",
         "./deps.ts",
         "./version.ts",
-        "./lock.json",
         "./src/**/*",
         "./README.md",
         "./LICENSE.md",

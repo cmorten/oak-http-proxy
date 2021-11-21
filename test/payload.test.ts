@@ -12,9 +12,7 @@ describe("when making a proxy request with a payload", () => {
   ];
 
   testCases.forEach((test) => {
-    it(`should deliver non-empty querystring params when ${test.name} (GET)`, async (
-      done,
-    ) => {
+    it(`should deliver non-empty querystring params when ${test.name} (GET)`, async (done) => {
       // Set up target server to proxy through to.
       const target = opine();
       target.use(json());
@@ -49,9 +47,7 @@ describe("when making a proxy request with a payload", () => {
         });
     });
 
-    it(`should deliver an empty body when ${test.name} (POST)`, async (
-      done,
-    ) => {
+    it(`should deliver an empty body when ${test.name} (POST)`, async (done) => {
       // Set up target server to proxy through to.
       const target = opine();
       target.use(json());
@@ -74,10 +70,14 @@ describe("when making a proxy request with a payload", () => {
       app.use(router.routes());
       app.use(router.allowedMethods());
 
+      const payload = test.encoding.includes("json") ? "{}" : "";
+
       const request = await superoak(app);
       request.post("/proxy")
-        .send(test.encoding.includes("json") ? {} : "")
+        .send(payload)
         .set("Content-Type", test.encoding)
+        // https://github.com/oakserver/oak/issues/402
+        .set("Content-Length", `${payload.length}`)
         .end((err, res) => {
           proxyServer.close();
           expect(res.body.message).toEqual("Hello Deno!");
@@ -85,9 +85,7 @@ describe("when making a proxy request with a payload", () => {
         });
     });
 
-    it(`should deliver a non-empty body when ${test.name} (POST)`, async (
-      done,
-    ) => {
+    it(`should deliver a non-empty body when ${test.name} (POST)`, async (done) => {
       // Set up target server to proxy through to.
       const target = opine();
       target.use(json());
@@ -110,10 +108,16 @@ describe("when making a proxy request with a payload", () => {
       app.use(router.routes());
       app.use(router.allowedMethods());
 
+      const payload = test.encoding.includes("json")
+        ? JSON.stringify({ name: "Deno" })
+        : "name=Deno";
+
       const request = await superoak(app);
       request.post("/proxy")
-        .send(test.encoding.includes("json") ? { name: "Deno" } : "name=Deno")
+        .send(payload)
         .set("Content-Type", test.encoding)
+        // https://github.com/oakserver/oak/issues/402
+        .set("Content-Length", `${payload.length}`)
         .end((err, res) => {
           proxyServer.close();
           expect(res.body.message).toEqual("Hello Deno!");
@@ -121,9 +125,7 @@ describe("when making a proxy request with a payload", () => {
         });
     });
 
-    it(`should not deliver a non-empty body when "parseReqBody" is for when ${test.name} (POST)`, async (
-      done,
-    ) => {
+    it(`should not deliver a non-empty body when "parseReqBody" is for when ${test.name} (POST)`, async (done) => {
       // Set up target server to proxy through to.
       const target = opine();
       target.use(json());

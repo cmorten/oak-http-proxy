@@ -75,9 +75,7 @@ describe("error handling can be overridden by user", () => {
     });
 
     describe("when a timeout is not set", () => {
-      it("passes status code (e.g. 504) directly to the client", async (
-        done,
-      ) => {
+      it("passes status code (e.g. 504) directly to the client", async (done) => {
         timeoutManager.reset();
         const targetServer = proxyTarget({ handlers: proxyRouteFn });
         const targetPort = (targetServer.listener.addr as Deno.NetAddr).port;
@@ -125,9 +123,7 @@ describe("error handling can be overridden by user", () => {
       "Whoever you are, and wherever you may be, friendship is always granted over a good cup of tea.";
 
     describe("when a timeout is set that fires", () => {
-      it("should use the provided handler function passing on the timeout error", async (
-        done,
-      ) => {
+      it("should use the provided handler function passing on the timeout error", async (done) => {
         timeoutManager.reset();
         const targetServer = proxyTarget({ handlers: proxyRouteFn });
         const targetPort = (targetServer.listener.addr as Deno.NetAddr).port;
@@ -155,9 +151,7 @@ describe("error handling can be overridden by user", () => {
     });
 
     describe("when the remote server is down", () => {
-      it("should use the provided handler function passing on the connection refused error", async (
-        done,
-      ) => {
+      it("should use the provided handler function passing on the connection refused error", async (done) => {
         const targetServer = proxyTarget({ handlers: proxyRouteFn });
         const targetPort = (targetServer.listener.addr as Deno.NetAddr).port;
         targetServer.close();

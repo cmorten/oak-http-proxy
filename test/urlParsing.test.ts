@@ -40,9 +40,7 @@ describe("url parsing", () => {
       .end(done);
   });
 
-  it("does not throw `Uncaught RangeError` if you have both a port and a trailing slash", async (
-    done,
-  ) => {
+  it("does not throw `Uncaught RangeError` if you have both a port and a trailing slash", async (done) => {
     const app = new Application();
     app.use(proxy("http://httpbin.org:80/"));
 

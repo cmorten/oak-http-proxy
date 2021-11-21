@@ -1,5 +1,14 @@
 # ChangeLog
 
+## [2.0.0] - 21-11-2021
+
+- feat: support Deno `1.16.2` and std `0.115.1`
+- feat: upgrade to `opineHttpProxy@3.0.0`
+- fix: usage of `ctx.throw()` in error scenarios
+- fix: don't send body if have null body status
+- feat: upgrade to opine, oak, and superdeno deps
+- test: set content-length header when make POST requests to an oak server in tests following body size limits protection
+
 ## [1.4.1] - 13-07-2021
 
 - fix: filterReq crashes send middleware (#3)

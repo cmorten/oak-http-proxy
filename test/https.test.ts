@@ -16,25 +16,19 @@ describe("proxies https", () => {
       });
   }
 
-  it("should proxy via https for a string url with 'https' protocol", (
-    done,
-  ) => {
+  it("should proxy via https for a string url with 'https' protocol", (done) => {
     const app = new Application();
     app.use(proxy("https://httpbin.org/get?show_env=1"));
     assertSecureRequest(app, done);
   });
 
-  it("should proxy via https for a string url with 'http' protocol but 'secure' option set to true", (
-    done,
-  ) => {
+  it("should proxy via https for a string url with 'http' protocol but 'secure' option set to true", (done) => {
     const app = new Application();
     app.use(proxy("http://httpbin.org/get?show_env=1", { secure: true }));
     assertSecureRequest(app, done);
   });
 
-  it("should proxy via https for a function url with 'https' protocol", (
-    done,
-  ) => {
+  it("should proxy via https for a function url with 'https' protocol", (done) => {
     const app = new Application();
     app.use(proxy(() => {
       return "https://httpbin.org/get?show_env=1";
@@ -42,9 +36,7 @@ describe("proxies https", () => {
     assertSecureRequest(app, done);
   });
 
-  it("should proxy via https for a function url with 'http' protocol but 'secure' option set to true", (
-    done,
-  ) => {
+  it("should proxy via https for a function url with 'http' protocol but 'secure' option set to true", (done) => {
     const app = new Application();
     app.use(proxy(() => {
       return "http://httpbin.org/get?show_env=1";
