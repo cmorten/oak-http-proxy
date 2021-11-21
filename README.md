@@ -14,7 +14,7 @@ Proxy middleware for Deno Oak HTTP servers.
 
 ```ts
 import { proxy } from "https://deno.land/x/oak_http_proxy@2.0.0/mod.ts";
-import { Application } from "https://deno.land/x/oak@v6.5.0/mod.ts";
+import { Application } from "https://deno.land/x/oak@v10.0.0/mod.ts";
 
 const app = new Application();
 
