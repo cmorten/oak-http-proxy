@@ -154,9 +154,9 @@ router.get(<span class="hljs-string">&quot;/function&quot;</span>, proxy(<span c
 				<p>Decorate the inbound response object from the proxied request.</p>
 				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
-  proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
+  proxy(<span class="hljs-string">&quot;www.example.com&quot;</span>, {
     <span class="hljs-attr">srcResDecorator</span>: <span class="hljs-function">(<span class="hljs-params">req, res, proxyRes, proxyResData</span>) =&gt;</span> {
-      data = <span class="hljs-built_in">JSON</span>.parse(proxyResData.toString(<span class="hljs-string">&quot;utf8&quot;</span>));
+      data = <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-keyword">new</span> TextDecoder().decode(proxyResData));
       data.newProperty = <span class="hljs-string">&quot;exciting data&quot;</span>;
 
       <span class="hljs-keyword">return</span> <span class="hljs-built_in">JSON</span>.stringify(data);
