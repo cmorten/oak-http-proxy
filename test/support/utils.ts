@@ -9,9 +9,11 @@ export const TEST_TIMEOUT = 3000;
  * @param name
  * @param fn
  */
-export async function describe(name: string, fn: () => void | Promise<void>) {
-  fn();
+export function describe(_name: string, fn: () => void | Promise<void>) {
+  return fn();
 }
+
+export type Done = (err?: unknown) => void;
 
 /**
  * An _it_ wrapper around `Deno.test`.
@@ -19,19 +21,25 @@ export async function describe(name: string, fn: () => void | Promise<void>) {
  * @param name
  * @param fn
  */
-export async function it(
+export function it(
   name: string,
-  fn: (done?: any) => void | Promise<void>,
-  opts?: Omit<Deno.TestDefinition, "name" | "fn">,
+  fn: (done: Done) => void | Promise<void>,
+  options?: Partial<Deno.TestDefinition>,
 ) {
   Deno.test({
-    ...opts,
+    ...options,
     name,
     fn: async () => {
-      let done: any = (err?: any) => {
-        if (err) throw err;
+      let testError: unknown;
+
+      let done: Done = (err?: unknown) => {
+        if (err) {
+          testError = err;
+        }
       };
+
       let race: Promise<unknown> = Promise.resolve();
+      let timeoutId: number;
 
       if (fn.length === 1) {
         let resolve: (value?: unknown) => void;
@@ -39,11 +47,11 @@ export async function it(
           resolve = r;
         });
 
-        let timeoutId: number;
-
         race = Promise.race([
           new Promise((_, reject) =>
             timeoutId = setTimeout(() => {
+              clearTimeout(timeoutId);
+
               reject(
                 new Error(
                   `test "${name}" failed to complete by calling "done" within ${TEST_TIMEOUT}ms.`,
@@ -54,15 +62,29 @@ export async function it(
           donePromise,
         ]);
 
-        done = (err?: any) => {
+        done = (err?: unknown) => {
           clearTimeout(timeoutId);
           resolve();
-          if (err) throw err;
+
+          if (err) {
+            testError = err;
+          }
         };
       }
 
       await fn(done);
       await race;
+
+      if (timeoutId!) {
+        clearTimeout(timeoutId);
+      }
+
+      // REF: https://github.com/denoland/deno/blob/987716798fb3bddc9abc7e12c25a043447be5280/ext/timers/01_timers.js#L353
+      await new Promise((resolve) => setTimeout(resolve, 20));
+
+      if (testError) {
+        throw testError;
+      }
     },
   });
 }

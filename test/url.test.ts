@@ -24,7 +24,7 @@ describe("url: string", () => {
       };
 
       const target = proxyTarget({ handlers: [proxyRouteFn] });
-      const targetPort = (target.listener.addr as Deno.NetAddr).port;
+      const targetPort = (target.addrs[0] as Deno.NetAddr).port;
 
       const router = new Router();
       router.get("/somePath/(.*)", proxy(`http://localhost:${targetPort}`));
@@ -57,7 +57,7 @@ describe("url: URL", () => {
       };
 
       const target = proxyTarget({ handlers: [proxyRouteFn] });
-      const targetPort = (target.listener.addr as Deno.NetAddr).port;
+      const targetPort = (target.addrs[0] as Deno.NetAddr).port;
 
       const router = new Router();
       router.get(

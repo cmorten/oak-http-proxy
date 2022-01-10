@@ -54,7 +54,7 @@ describe("error handling can be overridden by user", () => {
       it("passes 504 directly to client", async (done) => {
         timeoutManager.reset();
         const targetServer = proxyTarget({ handlers: proxyRouteFn });
-        const targetPort = (targetServer.listener.addr as Deno.NetAddr).port;
+        const targetPort = (targetServer.addrs[0] as Deno.NetAddr).port;
 
         const app = new Application();
         app.use(proxy(`http://localhost:${targetPort}/200`, { timeout: 0 }));
@@ -78,7 +78,7 @@ describe("error handling can be overridden by user", () => {
       it("passes status code (e.g. 504) directly to the client", async (done) => {
         timeoutManager.reset();
         const targetServer = proxyTarget({ handlers: proxyRouteFn });
-        const targetPort = (targetServer.listener.addr as Deno.NetAddr).port;
+        const targetPort = (targetServer.addrs[0] as Deno.NetAddr).port;
 
         const app = new Application();
         app.use(proxy(`http://localhost:${targetPort}/504`));
@@ -98,7 +98,7 @@ describe("error handling can be overridden by user", () => {
       it("passes status code (e.g. 500) back to the client", async (done) => {
         timeoutManager.reset();
         const targetServer = proxyTarget({ handlers: proxyRouteFn });
-        const targetPort = (targetServer.listener.addr as Deno.NetAddr).port;
+        const targetPort = (targetServer.addrs[0] as Deno.NetAddr).port;
 
         const app = new Application();
         app.use(proxy(`http://localhost:${targetPort}/500`));
@@ -126,7 +126,7 @@ describe("error handling can be overridden by user", () => {
       it("should use the provided handler function passing on the timeout error", async (done) => {
         timeoutManager.reset();
         const targetServer = proxyTarget({ handlers: proxyRouteFn });
-        const targetPort = (targetServer.listener.addr as Deno.NetAddr).port;
+        const targetPort = (targetServer.addrs[0] as Deno.NetAddr).port;
 
         const app = new Application();
         app.use(proxy(`http://localhost:${targetPort}/200`, {
@@ -153,7 +153,7 @@ describe("error handling can be overridden by user", () => {
     describe("when the remote server is down", () => {
       it("should use the provided handler function passing on the connection refused error", async (done) => {
         const targetServer = proxyTarget({ handlers: proxyRouteFn });
-        const targetPort = (targetServer.listener.addr as Deno.NetAddr).port;
+        const targetPort = (targetServer.addrs[0] as Deno.NetAddr).port;
         targetServer.close();
 
         const app = new Application();

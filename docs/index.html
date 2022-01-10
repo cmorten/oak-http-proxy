@@ -66,16 +66,16 @@
 					<h1>oak-http-proxy</h1>
 				</a>
 				<p>Proxy middleware for Deno Oak HTTP servers.</p>
-				<p><a href="https://github.com/asos-craigmorten/oak-http-proxy/tags/"><img src="https://img.shields.io/github/tag/asos-craigmorten/oak-http-proxy" alt="GitHub tag"></a> <img src="https://github.com/asos-craigmorten/oak-http-proxy/workflows/Test/badge.svg" alt="Test"> <a href="https://doc.deno.land/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://doc.deno.land/badge.svg" alt="deno doc"></a> <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a> <a href="https://img.shields.io/github/issues/asos-craigmorten/oak-http-proxy"><img src="https://img.shields.io/github/issues/asos-craigmorten/oak-http-proxy" alt="GitHub issues"></a>
-				<img src="https://img.shields.io/github/stars/asos-craigmorten/oak-http-proxy" alt="GitHub stars"> <img src="https://img.shields.io/github/forks/asos-craigmorten/oak-http-proxy" alt="GitHub forks"> <img src="https://img.shields.io/github/license/asos-craigmorten/oak-http-proxy" alt="oak-http-proxy License"> <a href="https://GitHub.com/asos-craigmorten/oak-http-proxy/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance"></a></p>
+				<p><a href="https://github.com/cmorten/oak-http-proxy/tags/"><img src="https://img.shields.io/github/tag/cmorten/oak-http-proxy" alt="GitHub tag"></a> <img src="https://github.com/cmorten/oak-http-proxy/workflows/Test/badge.svg" alt="Test"> <a href="https://doc.deno.land/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://doc.deno.land/badge.svg" alt="deno doc"></a> <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a> <a href="https://img.shields.io/github/issues/cmorten/oak-http-proxy"><img src="https://img.shields.io/github/issues/cmorten/oak-http-proxy" alt="GitHub issues"></a>
+				<img src="https://img.shields.io/github/stars/cmorten/oak-http-proxy" alt="GitHub stars"> <img src="https://img.shields.io/github/forks/cmorten/oak-http-proxy" alt="GitHub forks"> <img src="https://img.shields.io/github/license/cmorten/oak-http-proxy" alt="oak-http-proxy License"> <a href="https://GitHub.com/cmorten/oak-http-proxy/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance"></a></p>
 				<p align="left">
 					<a href="https://deno.land/x/oak_http_proxy"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy latest /x/ version" /></a>
 					<a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fdep-count%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy dependency count" /></a>
 					<a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fupdates%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy dependency outdatedness" /></a>
 					<a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fcache-size%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy cached size" /></a>
 				</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak_http_proxy@2.0.0/mod.ts&quot;</span>;
-<span class="hljs-keyword">import</span> { Application } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak@v10.0.0/mod.ts&quot;</span>;
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak_http_proxy@2.0.1/mod.ts&quot;</span>;
+<span class="hljs-keyword">import</span> { Application } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak@v10.1.0/mod.ts&quot;</span>;
 
 <span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Application();
 
@@ -89,19 +89,19 @@ app.use(proxy(<span class="hljs-string">&quot;https://github.com/oakserver/oak&q
 				<p>This is a <a href="https://deno.land/">Deno</a> module available to import direct from this repo and via the <a href="https://deno.land/x">Deno Registry</a>.</p>
 				<p>Before importing, <a href="https://deno.land/#installation">download and install Deno</a>.</p>
 				<p>You can then import oak-http-proxy straight into your project:</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak_http_proxy@2.0.0/mod.ts&quot;</span>;
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak_http_proxy@2.0.1/mod.ts&quot;</span>;
 </code></pre>
 				<p>oak-http-proxy is also available on <a href="https://nest.land/package/oak-http-proxy">nest.land</a>, a package registry for Deno on the Blockchain.</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://x.nest.land/oak-http-proxy@2.0.0/mod.ts&quot;</span>;
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://x.nest.land/oak-http-proxy@2.0.1/mod.ts&quot;</span>;
 </code></pre>
 				<a href="#docs" id="docs" style="color: inherit; text-decoration: none;">
 					<h2>Docs</h2>
 				</a>
 				<ul>
-					<li><a href="https://asos-craigmorten.github.io/oak-http-proxy/">oak-http-proxy Type Docs</a></li>
+					<li><a href="https://cmorten.github.io/oak-http-proxy/">oak-http-proxy Type Docs</a></li>
 					<li><a href="https://doc.deno.land/https/deno.land/x/oak_http_proxy/mod.ts">oak-http-proxy Deno Docs</a></li>
-					<li><a href="https://github.com/asos-craigmorten/oak-http-proxy/blob/main/LICENSE.md">License</a></li>
-					<li><a href="https://github.com/asos-craigmorten/oak-http-proxy/blob/main/.github/CHANGELOG.md">Changelog</a></li>
+					<li><a href="https://github.com/cmorten/oak-http-proxy/blob/main/LICENSE.md">License</a></li>
+					<li><a href="https://github.com/cmorten/oak-http-proxy/blob/main/.github/CHANGELOG.md">Changelog</a></li>
 				</ul>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
@@ -413,7 +413,7 @@ app.use(
 				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
 					<h2>Contributing</h2>
 				</a>
-				<p><a href="https://github.com/asos-craigmorten/oak-http-proxy/blob/main/.github/CONTRIBUTING.md">Contributing guide</a></p>
+				<p><a href="https://github.com/cmorten/oak-http-proxy/blob/main/.github/CONTRIBUTING.md">Contributing guide</a></p>
 				<hr>
 				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
 					<h2>License</h2>

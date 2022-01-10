@@ -25,7 +25,7 @@ describe("when making a proxy request with a payload", () => {
       });
 
       const proxyServer = target.listen();
-      const proxyPort = (proxyServer.listener.addr as Deno.NetAddr).port;
+      const proxyPort = (proxyServer.addrs[0] as Deno.NetAddr).port;
 
       // Setup our Oak server with proxy middleware.
       const router = new Router();
@@ -60,7 +60,7 @@ describe("when making a proxy request with a payload", () => {
       });
 
       const proxyServer = target.listen();
-      const proxyPort = (proxyServer.listener.addr as Deno.NetAddr).port;
+      const proxyPort = (proxyServer.addrs[0] as Deno.NetAddr).port;
 
       // Setup our Oak server with proxy middleware.
       const router = new Router();
@@ -98,7 +98,7 @@ describe("when making a proxy request with a payload", () => {
       });
 
       const proxyServer = target.listen();
-      const proxyPort = (proxyServer.listener.addr as Deno.NetAddr).port;
+      const proxyPort = (proxyServer.addrs[0] as Deno.NetAddr).port;
 
       // Setup our Oak server with proxy middleware.
       const router = new Router();
@@ -138,7 +138,7 @@ describe("when making a proxy request with a payload", () => {
       });
 
       const proxyServer = target.listen();
-      const proxyPort = (proxyServer.listener.addr as Deno.NetAddr).port;
+      const proxyPort = (proxyServer.addrs[0] as Deno.NetAddr).port;
 
       // Setup our Oak server with proxy middleware.
       const router = new Router();

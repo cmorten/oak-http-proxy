@@ -15,7 +15,7 @@ describe("proxies status code", () => {
       });
 
       const targetServer = target.listen();
-      const targetPort = (targetServer.listener.addr as Deno.NetAddr).port;
+      const targetPort = (targetServer.addrs[0] as Deno.NetAddr).port;
 
       const router = new Router();
       router.get(

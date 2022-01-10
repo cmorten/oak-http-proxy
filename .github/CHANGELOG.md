@@ -1,5 +1,11 @@
 # ChangeLog
 
+## [2.0.1] - 10-01-2022
+
+- feat: support Deno `1.17.2` and std `0.120.0`
+- feat: upgrade to `opineHttpProxy@3.0.1`
+- feat: other minor dependency upgrades
+
 ## [2.0.0] - 21-11-2021
 
 - feat: support Deno `1.16.2` and std `0.115.1`
@@ -47,4 +53,4 @@
 
 ## [1.0.0] - 26-08-2020
 
-- feat: initial loose port of [opine-http-proxy](https://github.com/asos-craigmorten/opine-http-proxy).
+- feat: initial loose port of [opine-http-proxy](https://github.com/cmorten/opine-http-proxy).

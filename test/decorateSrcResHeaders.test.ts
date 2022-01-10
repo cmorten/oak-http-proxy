@@ -14,7 +14,7 @@ describe("when userResHeaderDecorator is defined", () => {
       res.json(req.headers);
     });
     const targetServer = target.listen();
-    const targetPort = (targetServer.listener.addr as Deno.NetAddr).port;
+    const targetPort = (targetServer.addrs[0] as Deno.NetAddr).port;
 
     // Setup Oak with proxy middleware.
     const app = new Application();

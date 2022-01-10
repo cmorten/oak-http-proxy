@@ -5,14 +5,14 @@
  * 
  *    if have the repo cloned locally OR
  * 
- *    deno run --allow-net https://deno.land/x/oak_http_proxy@2.0.0/examples/basic/index.ts
+ *    deno run --allow-net https://deno.land/x/oak_http_proxy@2.0.1/examples/basic/index.ts
  * 
  *    if you don't!
  * 
  */
 
 import { proxy } from "../../mod.ts";
-import { Application } from "https://deno.land/x/oak@v10.0.0/mod.ts";
+import { Application } from "https://deno.land/x/oak@v10.1.0/mod.ts";
 
 const app = new Application();
 

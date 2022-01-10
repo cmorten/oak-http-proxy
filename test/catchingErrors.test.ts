@@ -33,7 +33,7 @@ describe("when server responds with an error", () => {
         res.sendStatus(statusCode.code);
       });
       const targetServer = target.listen(0);
-      const targetPort = (targetServer.listener.addr as Deno.NetAddr).port;
+      const targetPort = (targetServer.addrs[0] as Deno.NetAddr).port;
 
       // Setup Oak router with proxy middleware applied to `/proxy` route.
       const router = new Router();

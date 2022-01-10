@@ -1,8 +1,8 @@
 {
     "name": "oak-http-proxy",
     "description": "Proxy middleware for Deno Oak HTTP servers.",
-    "version": "2.0.0",
-    "repository": "https://github.com/asos-craigmorten/oak-http-proxy",
+    "version": "2.0.1",
+    "repository": "https://github.com/cmorten/oak-http-proxy",
     "stable": true,
     "files": [
         "./mod.ts",
@@ -18,7 +18,7 @@
     "checkInstallation": false,
     "check": false,
     "entry": "./mod.ts",
-    "homepage": "https://github.com/asos-craigmorten/oak-http-proxy",
+    "homepage": "https://github.com/cmorten/oak-http-proxy",
     "ignore": [],
     "unlisted": false
 }
