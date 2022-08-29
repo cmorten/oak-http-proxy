@@ -112,7 +112,6 @@ describe("url: function", () => {
       .get(`/proxy/${firstPort}`)
       .expect(204)
       .end(async (err) => {
-        console.log(err);
         firstServer.close();
         if (err) return done(err);
 

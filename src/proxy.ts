@@ -6,10 +6,10 @@ import {
   decorateSrcResHeaders,
   filterProxyRes,
   prepareProxyReq,
-  ProxyOptions,
   ProxyUrlFunction,
   sendProxyReq,
 } from "../deps.ts";
+import type { ProxyOptions } from "./types.ts";
 import { filterSrcReq } from "./steps/filterSrcReq.ts";
 import { buildProxyUrl } from "./steps/buildProxyUrl.ts";
 import { buildProxyReqInit } from "./steps/buildProxyReqInit.ts";

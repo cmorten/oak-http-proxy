@@ -6,7 +6,7 @@ function connectionResetHandler(ctx: any) {
     "oak-http-proxy reset the request.",
   );
   ctx.response.status = 504;
-  ctx.response.body = STATUS_TEXT.get(504);
+  ctx.response.body = STATUS_TEXT[504];
 }
 
 export function handleProxyErrors(err: any, ctx: any) {

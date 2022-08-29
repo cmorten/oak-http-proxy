@@ -1,5 +1,12 @@
 # ChangeLog
 
+## [2.1.0] - 29-08-2022
+
+- feat: support Deno `1.25.0` and std `0.153.0`
+- feat: upgrade to `opineHttpProxy@3.0.2`
+- feat: other minor dependency upgrades
+- feat: add `reqBodyLimit` for changing request body size limits
+
 ## [2.0.1] - 10-01-2022
 
 - feat: support Deno `1.17.2` and std `0.120.0`

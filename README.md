@@ -13,7 +13,7 @@ Proxy middleware for Deno Oak HTTP servers.
 </p>
 
 ```ts
-import { proxy } from "https://deno.land/x/oak_http_proxy@2.0.1/mod.ts";
+import { proxy } from "https://deno.land/x/oak_http_proxy@2.1.0/mod.ts";
 import { Application } from "https://deno.land/x/oak@v10.1.0/mod.ts";
 
 const app = new Application();
@@ -32,13 +32,13 @@ Before importing, [download and install Deno](https://deno.land/#installation).
 You can then import oak-http-proxy straight into your project:
 
 ```ts
-import { proxy } from "https://deno.land/x/oak_http_proxy@2.0.1/mod.ts";
+import { proxy } from "https://deno.land/x/oak_http_proxy@2.1.0/mod.ts";
 ```
 
 oak-http-proxy is also available on [nest.land](https://nest.land/package/oak-http-proxy), a package registry for Deno on the Blockchain.
 
 ```ts
-import { proxy } from "https://x.nest.land/oak-http-proxy@2.0.1/mod.ts";
+import { proxy } from "https://x.nest.land/oak-http-proxy@2.1.0/mod.ts";
 ```
 
 ## Docs
@@ -391,6 +391,21 @@ router.get(
   "/post",
   proxy("httpbin.org", {
     reqBodyEncoding: "utf-8",
+  })
+);
+```
+
+#### reqBodyLimit
+
+The request body size limit to use.
+
+Ignored if `reqBodyLimit` is set to `Infinity`.
+
+```ts
+router.get(
+  "/post",
+  proxy("httpbin.org", {
+    reqBodyLimit: 10_485_760, // 10MB
   })
 );
 ```

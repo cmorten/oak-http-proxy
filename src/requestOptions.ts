@@ -1,4 +1,5 @@
-import type { ProxyOptions, ProxyState } from "../deps.ts";
+import type { ProxyState } from "../deps.ts";
+import type { ProxyOptions } from "./types.ts";
 
 export function parseUrl(state: ProxyState, ctx: any) {
   const req = state.src.req;
@@ -61,7 +62,8 @@ export async function createRequestInit(
   options: ProxyOptions,
 ): Promise<RequestInit> {
   const body = options.parseReqBody && req.hasBody
-    ? await req.body({ type: "text" }).value
+    ? await req.body({ type: "text", limit: options.reqBodyLimit ?? Infinity })
+      .value
     : null;
 
   return {
