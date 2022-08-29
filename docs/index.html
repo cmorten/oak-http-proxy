@@ -397,6 +397,18 @@ app.use(
   })
 );
 </code></pre>
+				<a href="#reqbodylimit" id="reqbodylimit" style="color: inherit; text-decoration: none;">
+					<h4>reqBodyLimit</h4>
+				</a>
+				<p>The request body size limit to use.</p>
+				<p>Ignored if <code>reqBodyLimit</code> is set to <code>Infinity</code>.</p>
+				<pre><code class="language-ts">router.get(
+  <span class="hljs-string">&quot;/post&quot;</span>,
+  proxy(<span class="hljs-string">&quot;httpbin.org&quot;</span>, {
+    <span class="hljs-attr">reqBodyLimit</span>: <span class="hljs-number">10_485_760</span>, <span class="hljs-comment">// 10MB</span>
+  })
+);
+</code></pre>
 				<a href="#timeout" id="timeout" style="color: inherit; text-decoration: none;">
 					<h4>timeout</h4>
 				</a>
@@ -451,6 +463,9 @@ app.use(
 					<li class=" tsd-kind-module">
 						<a href="modules/_steps_sendsrcres_.html">&quot;steps/send<wbr>Src<wbr>Res&quot;</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_.html">&quot;types&quot;</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -466,6 +481,9 @@ app.use(
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 			</ul>
 		</div>
 	</div>
