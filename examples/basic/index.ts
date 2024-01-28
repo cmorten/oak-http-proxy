@@ -1,14 +1,13 @@
 /**
  * Run this example using:
- * 
+ *
  *    deno run --allow-net ./examples/basic/index.ts
- * 
+ *
  *    if have the repo cloned locally OR
- * 
- *    deno run --allow-net https://deno.land/x/oak_http_proxy@2.2.0/examples/basic/index.ts
- * 
+ *
+ *    deno run --allow-net https://deno.land/x/oak_http_proxy@2.3.0/examples/basic/index.ts
+ *
  *    if you don't!
- * 
  */
 
 import { proxy } from "../../mod.ts";
