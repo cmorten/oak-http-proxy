@@ -13,7 +13,7 @@ Proxy middleware for Deno Oak HTTP servers.
 </p>
 
 ```ts
-import { proxy } from "https://deno.land/x/oak_http_proxy@2.2.0/mod.ts";
+import { proxy } from "https://deno.land/x/oak_http_proxy@2.3.0/mod.ts";
 import { Application } from "https://deno.land/x/oak@v12.6.2/mod.ts";
 
 const app = new Application();
@@ -32,13 +32,13 @@ Before importing, [download and install Deno](https://deno.land/#installation).
 You can then import oak-http-proxy straight into your project:
 
 ```ts
-import { proxy } from "https://deno.land/x/oak_http_proxy@2.2.0/mod.ts";
+import { proxy } from "https://deno.land/x/oak_http_proxy@2.3.0/mod.ts";
 ```
 
 oak-http-proxy is also available on [nest.land](https://nest.land/package/oak-http-proxy), a package registry for Deno on the Blockchain.
 
 ```ts
-import { proxy } from "https://x.nest.land/oak-http-proxy@2.2.0/mod.ts";
+import { proxy } from "https://x.nest.land/oak-http-proxy@2.3.0/mod.ts";
 ```
 
 ## Docs
@@ -66,6 +66,15 @@ router.get(
 ```
 
 Note: Unmatched path segments of the incoming request url _are not_ transferred to the outbound proxy URL. For dynamic proxy urls use the function form.
+
+### Streaming
+
+Proxy requests and user responses are piped/streamed/chunked by default.
+
+If you define a response modifier (`srcResDecorator`, `srcResHeaderDecorator`),
+or need to inspect the response before continuing (`filterRes`), streaming is
+disabled, and the request and response are buffered. This can cause performance
+issues with large payloads.
 
 ### Proxy Options
 
