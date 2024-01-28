@@ -12,7 +12,7 @@
  */
 
 import { proxy } from "../../mod.ts";
-import { Application } from "https://deno.land/x/oak@v10.1.0/mod.ts";
+import { Application } from "https://deno.land/x/oak@v12.6.2/mod.ts";
 
 const app = new Application();
 
