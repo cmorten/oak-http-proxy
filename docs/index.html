@@ -1,165 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="default no-js">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>oak-http-proxy</title>
-    <meta name="description" content="Documentation for oak-http-proxy" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <header>
-      <div class="tsd-page-toolbar">
-        <div class="container">
-          <div class="table-wrap">
-            <div
-              class="table-cell"
-              id="tsd-search"
-              data-index="assets/js/search.json"
-              data-base="."
-            >
-              <div class="field">
-                <label
-                  for="tsd-search-field"
-                  class="tsd-widget search no-caption"
-                  >Search</label
-                >
-                <input id="tsd-search-field" type="text" />
-              </div>
-              <ul class="results">
-                <li class="state loading">Preparing search index...</li>
-                <li class="state failure">The search index is not available</li>
-              </ul>
-              <a href="index.html" class="title">oak-http-proxy</a>
-            </div>
-            <div class="table-cell" id="tsd-widgets">
-              <div id="tsd-filter">
-                <a
-                  href="#"
-                  class="tsd-widget options no-caption"
-                  data-toggle="options"
-                  >Options</a
-                >
-                <div class="tsd-filter-group">
-                  <div class="tsd-select" id="tsd-filter-visibility">
-                    <span class="tsd-select-label">All</span>
-                    <ul class="tsd-select-list">
-                      <li data-value="public">Public</li>
-                      <li data-value="protected">Public/Protected</li>
-                      <li data-value="private" class="selected">All</li>
-                    </ul>
-                  </div>
-                  <input type="checkbox" id="tsd-filter-inherited" checked />
-                  <label class="tsd-widget" for="tsd-filter-inherited"
-                    >Inherited</label
-                  >
-                  <input type="checkbox" id="tsd-filter-only-exported" />
-                  <label class="tsd-widget" for="tsd-filter-only-exported"
-                    >Only exported</label
-                  >
-                </div>
-              </div>
-              <a href="#" class="tsd-widget menu no-caption" data-toggle="menu"
-                >Menu</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tsd-page-title">
-        <div class="container">
-          <ul class="tsd-breadcrumb">
-            <li>
-              <a href="globals.html">Globals</a>
-            </li>
-          </ul>
-          <h1>oak-http-proxy</h1>
-        </div>
-      </div>
-    </header>
-    <div class="container container-main">
-      <div class="row">
-        <div class="col-8 col-content">
-          <div class="tsd-panel tsd-typography">
-            <a
-              href="#oak-http-proxy"
-              id="oak-http-proxy"
-              style="color: inherit; text-decoration: none"
-            >
-              <h1>oak-http-proxy</h1>
-            </a>
-            <p>Proxy middleware for Deno Oak HTTP servers.</p>
-            <p>
-              <a href="https://github.com/cmorten/oak-http-proxy/tags/"
-                ><img
-                  src="https://img.shields.io/github/tag/cmorten/oak-http-proxy"
-                  alt="GitHub tag"
-              /></a>
-              <img
-                src="https://github.com/cmorten/oak-http-proxy/workflows/Test/badge.svg"
-                alt="Test"
-              />
-              <a
-                href="https://doc.deno.land/https/deno.land/x/oak_http_proxy/mod.ts"
-                ><img src="https://doc.deno.land/badge.svg" alt="deno doc"
-              /></a>
-              <a href="http://makeapullrequest.com"
-                ><img
-                  src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"
-                  alt="PRs Welcome"
-              /></a>
-              <a
-                href="https://img.shields.io/github/issues/cmorten/oak-http-proxy"
-                ><img
-                  src="https://img.shields.io/github/issues/cmorten/oak-http-proxy"
-                  alt="GitHub issues"
-              /></a>
-              <img
-                src="https://img.shields.io/github/stars/cmorten/oak-http-proxy"
-                alt="GitHub stars"
-              />
-              <img
-                src="https://img.shields.io/github/forks/cmorten/oak-http-proxy"
-                alt="GitHub forks"
-              />
-              <img
-                src="https://img.shields.io/github/license/cmorten/oak-http-proxy"
-                alt="oak-http-proxy License"
-              />
-              <a
-                href="https://GitHub.com/cmorten/oak-http-proxy/graphs/commit-activity"
-                ><img
-                  src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"
-                  alt="Maintenance"
-              /></a>
-            </p>
-            <p align="left">
-              <a href="https://deno.land/x/oak_http_proxy"
-                ><img
-                  src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Foak_http_proxy%2Fmod.ts"
-                  alt="oak-http-proxy latest /x/ version"
-              /></a>
-              <a
-                href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"
-                ><img
-                  src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fdep-count%2Fx%2Foak_http_proxy%2Fmod.ts"
-                  alt="oak-http-proxy dependency count"
-              /></a>
-              <a
-                href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"
-                ><img
-                  src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fupdates%2Fx%2Foak_http_proxy%2Fmod.ts"
-                  alt="oak-http-proxy dependency outdatedness"
-              /></a>
-              <a
-                href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"
-                ><img
-                  src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fcache-size%2Fx%2Foak_http_proxy%2Fmod.ts"
-                  alt="oak-http-proxy cached size"
-              /></a>
-            </p>
-            <pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak_http_proxy@2.2.0/mod.ts&quot;</span>;
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>oak-http-proxy</title>
+	<meta name="description" content="Documentation for oak-http-proxy">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">oak-http-proxy</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>oak-http-proxy</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#oak-http-proxy" id="oak-http-proxy" style="color: inherit; text-decoration: none;">
+					<h1>oak-http-proxy</h1>
+				</a>
+				<p>Proxy middleware for Deno Oak HTTP servers.</p>
+				<p><a href="https://github.com/cmorten/oak-http-proxy/tags/"><img src="https://img.shields.io/github/tag/cmorten/oak-http-proxy" alt="GitHub tag"></a> <img src="https://github.com/cmorten/oak-http-proxy/workflows/Test/badge.svg" alt="Test"> <a href="https://doc.deno.land/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://doc.deno.land/badge.svg" alt="deno doc"></a> <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a> <a href="https://img.shields.io/github/issues/cmorten/oak-http-proxy"><img src="https://img.shields.io/github/issues/cmorten/oak-http-proxy" alt="GitHub issues"></a>
+				<img src="https://img.shields.io/github/stars/cmorten/oak-http-proxy" alt="GitHub stars"> <img src="https://img.shields.io/github/forks/cmorten/oak-http-proxy" alt="GitHub forks"> <img src="https://img.shields.io/github/license/cmorten/oak-http-proxy" alt="oak-http-proxy License"> <a href="https://GitHub.com/cmorten/oak-http-proxy/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance"></a></p>
+				<p align="left">
+					<a href="https://deno.land/x/oak_http_proxy"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy latest /x/ version" /></a>
+					<a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fdep-count%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy dependency count" /></a>
+					<a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fupdates%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy dependency outdatedness" /></a>
+					<a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/oak_http_proxy/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fcache-size%2Fx%2Foak_http_proxy%2Fmod.ts" alt="oak-http-proxy cached size" /></a>
+				</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak_http_proxy@2.2.0/mod.ts&quot;</span>;
 <span class="hljs-keyword">import</span> { Application } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak@v12.6.2/mod.ts&quot;</span>;
 
 <span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Application();
@@ -168,89 +83,34 @@ app.use(proxy(<span class="hljs-string">&quot;https://github.com/oakserver/oak&q
 
 <span class="hljs-keyword">await</span> app.listen({ <span class="hljs-attr">port</span>: <span class="hljs-number">3000</span> });
 </code></pre>
-            <a
-              href="#installation"
-              id="installation"
-              style="color: inherit; text-decoration: none"
-            >
-              <h2>Installation</h2>
-            </a>
-            <p>
-              This is a <a href="https://deno.land/">Deno</a> module available
-              to import direct from this repo and via the
-              <a href="https://deno.land/x">Deno Registry</a>.
-            </p>
-            <p>
-              Before importing,
-              <a href="https://deno.land/#installation"
-                >download and install Deno</a
-              >.
-            </p>
-            <p>
-              You can then import oak-http-proxy straight into your project:
-            </p>
-            <pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak_http_proxy@2.2.0/mod.ts&quot;</span>;
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
+				<p>This is a <a href="https://deno.land/">Deno</a> module available to import direct from this repo and via the <a href="https://deno.land/x">Deno Registry</a>.</p>
+				<p>Before importing, <a href="https://deno.land/#installation">download and install Deno</a>.</p>
+				<p>You can then import oak-http-proxy straight into your project:</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://deno.land/x/oak_http_proxy@2.2.0/mod.ts&quot;</span>;
 </code></pre>
-            <p>
-              oak-http-proxy is also available on
-              <a href="https://nest.land/package/oak-http-proxy">nest.land</a>,
-              a package registry for Deno on the Blockchain.
-            </p>
-            <pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://x.nest.land/oak-http-proxy@2.2.0/mod.ts&quot;</span>;
+				<p>oak-http-proxy is also available on <a href="https://nest.land/package/oak-http-proxy">nest.land</a>, a package registry for Deno on the Blockchain.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { proxy } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;https://x.nest.land/oak-http-proxy@2.2.0/mod.ts&quot;</span>;
 </code></pre>
-            <a
-              href="#docs"
-              id="docs"
-              style="color: inherit; text-decoration: none"
-            >
-              <h2>Docs</h2>
-            </a>
-            <ul>
-              <li>
-                <a href="https://cmorten.github.io/oak-http-proxy/"
-                  >oak-http-proxy Type Docs</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://doc.deno.land/https/deno.land/x/oak_http_proxy/mod.ts"
-                  >oak-http-proxy Deno Docs</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/cmorten/oak-http-proxy/blob/main/LICENSE.md"
-                  >License</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/cmorten/oak-http-proxy/blob/main/.github/CHANGELOG.md"
-                  >Changelog</a
-                >
-              </li>
-            </ul>
-            <a
-              href="#usage"
-              id="usage"
-              style="color: inherit; text-decoration: none"
-            >
-              <h2>Usage</h2>
-            </a>
-            <a
-              href="#url"
-              id="url"
-              style="color: inherit; text-decoration: none"
-            >
-              <h3>URL</h3>
-            </a>
-            <p>
-              The url argument that can be a string, URL or a function that
-              returns a string or URL. This is used as the url to proxy requests
-              to. Query string parameters and hashes are transferred from
-              incoming request urls onto the proxy url.
-            </p>
-            <pre><code class="language-ts">router.get(<span class="hljs-string">&quot;/string&quot;</span>, proxy(<span class="hljs-string">&quot;http://google.com&quot;</span>));
+				<a href="#docs" id="docs" style="color: inherit; text-decoration: none;">
+					<h2>Docs</h2>
+				</a>
+				<ul>
+					<li><a href="https://cmorten.github.io/oak-http-proxy/">oak-http-proxy Type Docs</a></li>
+					<li><a href="https://doc.deno.land/https/deno.land/x/oak_http_proxy/mod.ts">oak-http-proxy Deno Docs</a></li>
+					<li><a href="https://github.com/cmorten/oak-http-proxy/blob/main/LICENSE.md">License</a></li>
+					<li><a href="https://github.com/cmorten/oak-http-proxy/blob/main/.github/CHANGELOG.md">Changelog</a></li>
+				</ul>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<a href="#url" id="url" style="color: inherit; text-decoration: none;">
+					<h3>URL</h3>
+				</a>
+				<p>The url argument that can be a string, URL or a function that returns a string or URL. This is used as the url to proxy requests to. Query string parameters and hashes are transferred from incoming request urls onto the proxy url.</p>
+				<pre><code class="language-ts">router.get(<span class="hljs-string">&quot;/string&quot;</span>, proxy(<span class="hljs-string">&quot;http://google.com&quot;</span>));
 
 router.get(<span class="hljs-string">&quot;/url&quot;</span>, proxy(<span class="hljs-keyword">new</span> URL(<span class="hljs-string">&quot;http://google.com&quot;</span>)));
 
@@ -259,40 +119,19 @@ router.get(
   proxy(<span class="hljs-function">(<span class="hljs-params">ctx</span>) =&gt;</span> <span class="hljs-keyword">new</span> URL(<span class="hljs-string">&quot;http://google.com&quot;</span>))
 );
 </code></pre>
-            <p>
-              Note: Unmatched path segments of the incoming request url
-              <em>are not</em> transferred to the outbound proxy URL. For
-              dynamic proxy urls use the function form.
-            </p>
-            <a
-              href="#proxy-options"
-              id="proxy-options"
-              style="color: inherit; text-decoration: none"
-            >
-              <h3>Proxy Options</h3>
-            </a>
-            <p>
-              You can also provide several options which allow you to filter,
-              customize and decorate proxied requests and responses.
-            </p>
-            <pre><code class="language-ts">app.use(proxy(<span class="hljs-string">&quot;http://google.com&quot;</span>, proxyOptions));
+				<p>Note: Unmatched path segments of the incoming request url <em>are not</em> transferred to the outbound proxy URL. For dynamic proxy urls use the function form.</p>
+				<a href="#proxy-options" id="proxy-options" style="color: inherit; text-decoration: none;">
+					<h3>Proxy Options</h3>
+				</a>
+				<p>You can also provide several options which allow you to filter, customize and decorate proxied requests and responses.</p>
+				<pre><code class="language-ts">app.use(proxy(<span class="hljs-string">&quot;http://google.com&quot;</span>, proxyOptions));
 </code></pre>
-            <a
-              href="#filterreqreq-res-supports-promises"
-              id="filterreqreq-res-supports-promises"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>filterReq(req, res) (supports Promises)</h4>
-            </a>
-            <p>
-              The <code>filterReq</code> option can be used to limit what
-              requests are proxied.
-            </p>
-            <p>
-              Return false to continue to execute the proxy; return true to skip
-              the proxy for this request.
-            </p>
-            <pre><code class="language-ts">app.use(
+				<a href="#filterreqreq-res-supports-promises" id="filterreqreq-res-supports-promises" style="color: inherit; text-decoration: none;">
+					<h4>filterReq(req, res) (supports Promises)</h4>
+				</a>
+				<p>The <code>filterReq</code> option can be used to limit what requests are proxied.</p>
+				<p>Return false to continue to execute the proxy; return true to skip the proxy for this request.</p>
+				<pre><code class="language-ts">app.use(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
     <span class="hljs-attr">filterReq</span>: <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
@@ -301,8 +140,8 @@ router.get(
   })
 );
 </code></pre>
-            <p>Promise form:</p>
-            <pre><code class="language-ts">app.use(
+				<p>Promise form:</p>
+				<pre><code class="language-ts">app.use(
   proxy(<span class="hljs-string">&quot;localhost:12346&quot;</span>, {
     <span class="hljs-attr">filterReq</span>: <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> {
@@ -312,20 +151,11 @@ router.get(
   })
 );
 </code></pre>
-            <a
-              href="#srcresdecoratorreq-res-proxyres-proxyresdata-supports-promise"
-              id="srcresdecoratorreq-res-proxyres-proxyresdata-supports-promise"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>
-                srcResDecorator(req, res, proxyRes, proxyResData) (supports
-                Promise)
-              </h4>
-            </a>
-            <p>
-              Decorate the inbound response object from the proxied request.
-            </p>
-            <pre><code class="language-ts">router.get(
+				<a href="#srcresdecoratorreq-res-proxyres-proxyresdata-supports-promise" id="srcresdecoratorreq-res-proxyres-proxyresdata-supports-promise" style="color: inherit; text-decoration: none;">
+					<h4>srcResDecorator(req, res, proxyRes, proxyResData) (supports Promise)</h4>
+				</a>
+				<p>Decorate the inbound response object from the proxied request.</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.example.com&quot;</span>, {
     <span class="hljs-attr">srcResDecorator</span>: <span class="hljs-function">(<span class="hljs-params">req, res, proxyRes, proxyResData</span>) =&gt;</span> {
@@ -337,7 +167,7 @@ router.get(
   })
 );
 </code></pre>
-            <pre><code class="language-ts">app.use(
+				<pre><code class="language-ts">app.use(
   proxy(<span class="hljs-string">&quot;httpbin.org&quot;</span>, {
     <span class="hljs-attr">srcResDecorator</span>: <span class="hljs-function">(<span class="hljs-params">req, res, proxyRes, proxyResData</span>) =&gt;</span> {
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> {
@@ -351,52 +181,23 @@ router.get(
   })
 );
 </code></pre>
-            <a
-              href="#304---not-modified"
-              id="304---not-modified"
-              style="color: inherit; text-decoration: none"
-            >
-              <h5>304 - Not Modified</h5>
-            </a>
-            <p>
-              When your proxied service returns 304 Not Modified this step will
-              be skipped, since there should be no body to decorate.
-            </p>
-            <a
-              href="#exploiting-references"
-              id="exploiting-references"
-              style="color: inherit; text-decoration: none"
-            >
-              <h5>Exploiting references</h5>
-            </a>
-            <p>
-              The intent is that this be used to modify the proxy response data
-              only.
-            </p>
-            <p>
-              Note: The other arguments are passed by reference, so you
-              <em>can</em> currently exploit this to modify either
-              response&#39;s headers, for instance, but this is not a reliable
-              interface.
-            </p>
-            <a
-              href="#memoizeurl"
-              id="memoizeurl"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>memoizeUrl</h4>
-            </a>
-            <p>Defaults to <code>true</code>.</p>
-            <p>
-              When true, the <code>url</code> argument will be parsed on first
-              request, and memoized for subsequent requests.
-            </p>
-            <p>
-              When <code>false</code>, <code>url</code> argument will be parsed
-              on each request.
-            </p>
-            <p>For example:</p>
-            <pre><code class="language-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">coinToss</span>(<span class="hljs-params"></span>) </span>{
+				<a href="#304---not-modified" id="304---not-modified" style="color: inherit; text-decoration: none;">
+					<h5>304 - Not Modified</h5>
+				</a>
+				<p>When your proxied service returns 304 Not Modified this step will be skipped, since there should be no body to decorate.</p>
+				<a href="#exploiting-references" id="exploiting-references" style="color: inherit; text-decoration: none;">
+					<h5>Exploiting references</h5>
+				</a>
+				<p>The intent is that this be used to modify the proxy response data only.</p>
+				<p>Note: The other arguments are passed by reference, so you <em>can</em> currently exploit this to modify either response&#39;s headers, for instance, but this is not a reliable interface.</p>
+				<a href="#memoizeurl" id="memoizeurl" style="color: inherit; text-decoration: none;">
+					<h4>memoizeUrl</h4>
+				</a>
+				<p>Defaults to <code>true</code>.</p>
+				<p>When true, the <code>url</code> argument will be parsed on first request, and memoized for subsequent requests.</p>
+				<p>When <code>false</code>, <code>url</code> argument will be parsed on each request.</p>
+				<p>For example:</p>
+				<pre><code class="language-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">coinToss</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.random() &gt; <span class="hljs-number">0.5</span>;
 }
 
@@ -410,26 +211,13 @@ app.use(
   })
 );
 </code></pre>
-            <p>
-              In this example, when <code>memoizeUrl: false</code>, the coinToss
-              occurs on each request, and each request could get either value.
-            </p>
-            <p>
-              Conversely, When <code>memoizeUrl: true</code>, the coinToss would
-              occur on the first request, and all additional requests would
-              return the value resolved on the first request.
-            </p>
-            <a
-              href="#srcresheaderdecorator"
-              id="srcresheaderdecorator"
-              style="color: inherit; text-decoration: none"
-            >
-              <h3>srcResHeaderDecorator</h3>
-            </a>
-            <p>
-              Decorate the inbound response headers from the proxied request.
-            </p>
-            <pre><code class="language-ts">router.get(
+				<p>In this example, when <code>memoizeUrl: false</code>, the coinToss occurs on each request, and each request could get either value.</p>
+				<p>Conversely, When <code>memoizeUrl: true</code>, the coinToss would occur on the first request, and all additional requests would return the value resolved on the first request.</p>
+				<a href="#srcresheaderdecorator" id="srcresheaderdecorator" style="color: inherit; text-decoration: none;">
+					<h3>srcResHeaderDecorator</h3>
+				</a>
+				<p>Decorate the inbound response headers from the proxied request.</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
     <span class="hljs-function"><span class="hljs-title">srcResHeaderDecorator</span>(<span class="hljs-params">headers, req, res, proxyReq, proxyRes</span>)</span> {
@@ -438,19 +226,11 @@ app.use(
   })
 );
 </code></pre>
-            <a
-              href="#filterresproxyres-proxyresdata-supports-promise-form"
-              id="filterresproxyres-proxyresdata-supports-promise-form"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>filterRes(proxyRes, proxyResData) (supports Promise form)</h4>
-            </a>
-            <p>
-              Allows you to inspect the proxy response, and decide if you want
-              to continue processing (via oak-http-proxy) or continue onto the
-              next middleware.
-            </p>
-            <pre><code class="language-ts">router.get(
+				<a href="#filterresproxyres-proxyresdata-supports-promise-form" id="filterresproxyres-proxyresdata-supports-promise-form" style="color: inherit; text-decoration: none;">
+					<h4>filterRes(proxyRes, proxyResData) (supports Promise form)</h4>
+				</a>
+				<p>Allows you to inspect the proxy response, and decide if you want to continue processing (via oak-http-proxy) or continue onto the next middleware.</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
     <span class="hljs-function"><span class="hljs-title">filterRes</span>(<span class="hljs-params">proxyRes</span>)</span> {
@@ -459,25 +239,12 @@ app.use(
   })
 );
 </code></pre>
-            <a
-              href="#proxyerrorhandler"
-              id="proxyerrorhandler"
-              style="color: inherit; text-decoration: none"
-            >
-              <h3>proxyErrorHandler</h3>
-            </a>
-            <p>
-              By default, <code>oak-http-proxy</code> will throw any errors
-              except <code>ECONNRESET</code> and <code>ECONTIMEDOUT</code> via
-              <code>ctx.throw(err)</code>, so that your application can handle
-              or react to them, or just drop through to your default error
-              handling.
-            </p>
-            <p>
-              If you would like to modify this behavior, you can provide your
-              own <code>proxyErrorHandler</code>.
-            </p>
-            <pre><code class="language-ts"><span class="hljs-comment">// Example of skipping all error handling.</span>
+				<a href="#proxyerrorhandler" id="proxyerrorhandler" style="color: inherit; text-decoration: none;">
+					<h3>proxyErrorHandler</h3>
+				</a>
+				<p>By default, <code>oak-http-proxy</code> will throw any errors except <code>ECONNRESET</code> and <code>ECONTIMEDOUT</code> via <code>ctx.throw(err)</code>, so that your application can handle or react to them, or just drop through to your default error handling.</p>
+				<p>If you would like to modify this behavior, you can provide your own <code>proxyErrorHandler</code>.</p>
+				<pre><code class="language-ts"><span class="hljs-comment">// Example of skipping all error handling.</span>
 
 app.use(
   proxy(<span class="hljs-string">&quot;localhost:12346&quot;</span>, {
@@ -511,19 +278,12 @@ app.use(
   })
 );
 </code></pre>
-            <a
-              href="#proxyrequrldecoratorurl-req-supports-promise-form"
-              id="proxyrequrldecoratorurl-req-supports-promise-form"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>proxyReqUrlDecorator(url, req) (supports Promise form)</h4>
-            </a>
-            <p>Decorate the outbound proxied request url.</p>
-            <p>
-              The returned url is used for the <code>fetch</code> method
-              internally.
-            </p>
-            <pre><code class="language-ts">router.get(
+				<a href="#proxyrequrldecoratorurl-req-supports-promise-form" id="proxyrequrldecoratorurl-req-supports-promise-form" style="color: inherit; text-decoration: none;">
+					<h4>proxyReqUrlDecorator(url, req) (supports Promise form)</h4>
+				</a>
+				<p>Decorate the outbound proxied request url.</p>
+				<p>The returned url is used for the <code>fetch</code> method internally.</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
     <span class="hljs-function"><span class="hljs-title">proxyReqUrlDecorator</span>(<span class="hljs-params">url, req</span>)</span> {
@@ -534,8 +294,8 @@ app.use(
   })
 );
 </code></pre>
-            <p>You can also use Promises:</p>
-            <pre><code class="language-ts">router.get(
+				<p>You can also use Promises:</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;localhost:3000&quot;</span>, {
     <span class="hljs-function"><span class="hljs-title">proxyReqOptDecorator</span>(<span class="hljs-params">url, req</span>)</span> {
@@ -550,37 +310,18 @@ app.use(
   })
 );
 </code></pre>
-            <p>
-              Generally it is advised to use the function form for the passed
-              URL argument as this provides the full context object whereas the
-              <code>proxyReqOptDecorator</code> passes only the
-              <code>context.request</code> object.
-            </p>
-            <p>
-              Potential use cases for <code>proxyReqOptDecorator</code> include:
-            </p>
-            <ul>
-              <li>Overriding default protocol behaviour.</li>
-              <li>
-                Overriding default query-string and hash transfer behaviour.
-              </li>
-            </ul>
-            <a
-              href="#proxyreqinitdecoratorproxyreqopts-req-supports-promise-form"
-              id="proxyreqinitdecoratorproxyreqopts-req-supports-promise-form"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>
-                proxyReqInitDecorator(proxyReqOpts, req) (supports Promise form)
-              </h4>
-            </a>
-            <p>Decorate the outbound proxied request initialization options.</p>
-            <p>
-              This configuration will be used within the
-              <code>fetch</code> method internally to make the request to the
-              provided url.
-            </p>
-            <pre><code class="language-ts">router.get(
+				<p>Generally it is advised to use the function form for the passed URL argument as this provides the full context object whereas the <code>proxyReqOptDecorator</code> passes only the <code>context.request</code> object.</p>
+				<p>Potential use cases for <code>proxyReqOptDecorator</code> include:</p>
+				<ul>
+					<li>Overriding default protocol behaviour.</li>
+					<li>Overriding default query-string and hash transfer behaviour.</li>
+				</ul>
+				<a href="#proxyreqinitdecoratorproxyreqopts-req-supports-promise-form" id="proxyreqinitdecoratorproxyreqopts-req-supports-promise-form" style="color: inherit; text-decoration: none;">
+					<h4>proxyReqInitDecorator(proxyReqOpts, req) (supports Promise form)</h4>
+				</a>
+				<p>Decorate the outbound proxied request initialization options.</p>
+				<p>This configuration will be used within the <code>fetch</code> method internally to make the request to the provided url.</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
     <span class="hljs-function"><span class="hljs-title">proxyReqInitDecorator</span>(<span class="hljs-params">proxyReqOpts, srcReq</span>)</span> {
@@ -594,8 +335,8 @@ app.use(
   })
 );
 </code></pre>
-            <p>You can also use Promises:</p>
-            <pre><code class="language-ts">router.get(
+				<p>You can also use Promises:</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
     <span class="hljs-function"><span class="hljs-title">proxyReqOptDecorator</span>(<span class="hljs-params">proxyReqOpts, srcReq</span>)</span> {
@@ -608,247 +349,152 @@ app.use(
   })
 );
 </code></pre>
-            <a
-              href="#secure"
-              id="secure"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>secure</h4>
-            </a>
-            <p>
-              Normally, your proxy request will be made on the same protocol as
-              the <code>url</code> parameter. If you&#39;d like to force the
-              proxy request to be https, use this option.
-            </p>
-            <pre><code class="language-ts">app.use(
+				<a href="#secure" id="secure" style="color: inherit; text-decoration: none;">
+					<h4>secure</h4>
+				</a>
+				<p>Normally, your proxy request will be made on the same protocol as the <code>url</code> parameter. If you&#39;d like to force the proxy request to be https, use this option.</p>
+				<pre><code class="language-ts">app.use(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;http://www.google.com&quot;</span>, {
     <span class="hljs-attr">secure</span>: <span class="hljs-literal">true</span>,
   })
 );
 </code></pre>
-            <p>
-              Note: if the proxy is passed a url without a protocol then HTTP
-              will be used by default unless overridden by this option.
-            </p>
-            <a
-              href="#preservehostheader"
-              id="preservehostheader"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>preserveHostHeader</h4>
-            </a>
-            <p>
-              You can copy the host HTTP header to the proxied Oak server using
-              the <code>preserveHostHeader</code> option.
-            </p>
-            <pre><code class="language-ts">router.get(
+				<p>Note: if the proxy is passed a url without a protocol then HTTP will be used by default unless overridden by this option.</p>
+				<a href="#preservehostheader" id="preservehostheader" style="color: inherit; text-decoration: none;">
+					<h4>preserveHostHeader</h4>
+				</a>
+				<p>You can copy the host HTTP header to the proxied Oak server using the <code>preserveHostHeader</code> option.</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
     <span class="hljs-attr">preserveHostHeader</span>: <span class="hljs-literal">true</span>,
   })
 );
 </code></pre>
-            <a
-              href="#parsereqbody"
-              id="parsereqbody"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>parseReqBody</h4>
-            </a>
-            <p>
-              The <code>parseReqBody</code> option allows you to control whether
-              the request body should be parsed and sent with the proxied
-              request. If set to <code>false</code> then an incoming request
-              body will not be sent with the proxied request.
-            </p>
-            <a
-              href="#reqasbuffer"
-              id="reqasbuffer"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>reqAsBuffer</h4>
-            </a>
-            <p>
-              Configure whether the proxied request body should be sent as a
-              UInt8Array buffer.
-            </p>
-            <p>
-              Ignored if <code>parseReqBody</code> is set to <code>false</code>.
-            </p>
-            <pre><code class="language-ts">router.get(
+				<a href="#parsereqbody" id="parsereqbody" style="color: inherit; text-decoration: none;">
+					<h4>parseReqBody</h4>
+				</a>
+				<p>The <code>parseReqBody</code> option allows you to control whether the request body should be parsed and sent with the proxied request. If set to <code>false</code> then an incoming request body will not be sent with the proxied request.</p>
+				<a href="#reqasbuffer" id="reqasbuffer" style="color: inherit; text-decoration: none;">
+					<h4>reqAsBuffer</h4>
+				</a>
+				<p>Configure whether the proxied request body should be sent as a UInt8Array buffer.</p>
+				<p>Ignored if <code>parseReqBody</code> is set to <code>false</code>.</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/proxy&quot;</span>,
   proxy(<span class="hljs-string">&quot;www.google.com&quot;</span>, {
     <span class="hljs-attr">reqAsBuffer</span>: <span class="hljs-literal">true</span>,
   })
 );
 </code></pre>
-            <a
-              href="#reqbodyencoding"
-              id="reqbodyencoding"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>reqBodyEncoding</h4>
-            </a>
-            <p>
-              The request body encoding to use. Currently only &quot;utf-8&quot;
-              is supported.
-            </p>
-            <p>
-              Ignored if <code>parseReqBody</code> is set to <code>false</code>.
-            </p>
-            <pre><code class="language-ts">router.get(
+				<a href="#reqbodyencoding" id="reqbodyencoding" style="color: inherit; text-decoration: none;">
+					<h4>reqBodyEncoding</h4>
+				</a>
+				<p>The request body encoding to use. Currently only &quot;utf-8&quot; is supported.</p>
+				<p>Ignored if <code>parseReqBody</code> is set to <code>false</code>.</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/post&quot;</span>,
   proxy(<span class="hljs-string">&quot;httpbin.org&quot;</span>, {
     <span class="hljs-attr">reqBodyEncoding</span>: <span class="hljs-string">&quot;utf-8&quot;</span>,
   })
 );
 </code></pre>
-            <a
-              href="#reqbodylimit"
-              id="reqbodylimit"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>reqBodyLimit</h4>
-            </a>
-            <p>The request body size limit to use.</p>
-            <p>
-              Ignored if <code>reqBodyLimit</code> is set to
-              <code>Infinity</code>.
-            </p>
-            <pre><code class="language-ts">router.get(
+				<a href="#reqbodylimit" id="reqbodylimit" style="color: inherit; text-decoration: none;">
+					<h4>reqBodyLimit</h4>
+				</a>
+				<p>The request body size limit to use.</p>
+				<p>Ignored if <code>reqBodyLimit</code> is set to <code>Infinity</code>.</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/post&quot;</span>,
   proxy(<span class="hljs-string">&quot;httpbin.org&quot;</span>, {
     <span class="hljs-attr">reqBodyLimit</span>: <span class="hljs-number">10_485_760</span>, <span class="hljs-comment">// 10MB</span>
   })
 );
 </code></pre>
-            <a
-              href="#timeout"
-              id="timeout"
-              style="color: inherit; text-decoration: none"
-            >
-              <h4>timeout</h4>
-            </a>
-            <p>Configure a timeout in ms for the outbound proxied request.</p>
-            <p>If not provided the request will never time out.</p>
-            <p>
-              Timed-out requests will respond with 504 status code and a
-              X-Timeout-Reason header.
-            </p>
-            <pre><code class="language-ts">router.get(
+				<a href="#timeout" id="timeout" style="color: inherit; text-decoration: none;">
+					<h4>timeout</h4>
+				</a>
+				<p>Configure a timeout in ms for the outbound proxied request.</p>
+				<p>If not provided the request will never time out.</p>
+				<p>Timed-out requests will respond with 504 status code and a X-Timeout-Reason header.</p>
+				<pre><code class="language-ts">router.get(
   <span class="hljs-string">&quot;/&quot;</span>,
   proxy(<span class="hljs-string">&quot;httpbin.org&quot;</span>, {
     <span class="hljs-attr">timeout</span>: <span class="hljs-number">2000</span>, <span class="hljs-comment">// in milliseconds, two seconds</span>
   })
 );
 </code></pre>
-            <a
-              href="#contributing"
-              id="contributing"
-              style="color: inherit; text-decoration: none"
-            >
-              <h2>Contributing</h2>
-            </a>
-            <p>
-              <a
-                href="https://github.com/cmorten/oak-http-proxy/blob/main/.github/CONTRIBUTING.md"
-                >Contributing guide</a
-              >
-            </p>
-            <hr />
-            <a
-              href="#license"
-              id="license"
-              style="color: inherit; text-decoration: none"
-            >
-              <h2>License</h2>
-            </a>
-            <p>
-              oak-http-proxy is licensed under the
-              <a href="./LICENSE.md">MIT License</a>.
-            </p>
-          </div>
-        </div>
-        <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-          <nav class="tsd-navigation primary">
-            <ul>
-              <li class="globals">
-                <a href="globals.html"><em>Globals</em></a>
-              </li>
-              <li class="tsd-kind-module">
-                <a href="modules/_proxy_.html">&quot;proxy&quot;</a>
-              </li>
-              <li class="tsd-kind-module">
-                <a href="modules/_requestoptions_.html"
-                  >&quot;request<wbr />Options&quot;</a
-                >
-              </li>
-              <li class="tsd-kind-module">
-                <a href="modules/_steps_buildproxyreqinit_.html"
-                  >&quot;steps/build<wbr />Proxy<wbr />Req<wbr />Init&quot;</a
-                >
-              </li>
-              <li class="tsd-kind-module">
-                <a href="modules/_steps_buildproxyurl_.html"
-                  >&quot;steps/build<wbr />Proxy<wbr />Url&quot;</a
-                >
-              </li>
-              <li class="tsd-kind-module">
-                <a href="modules/_steps_copyproxyresheaderstouserres_.html"
-                  >&quot;steps/copy<wbr />Proxy<wbr />Res<wbr />Headers<wbr />ToUser<wbr />Res&quot;</a
-                >
-              </li>
-              <li class="tsd-kind-module">
-                <a href="modules/_steps_filtersrcreq_.html"
-                  >&quot;steps/filter<wbr />Src<wbr />Req&quot;</a
-                >
-              </li>
-              <li class="tsd-kind-module">
-                <a href="modules/_steps_handleproxyerrors_.html"
-                  >&quot;steps/handle<wbr />Proxy<wbr />Errors&quot;</a
-                >
-              </li>
-              <li class="tsd-kind-module">
-                <a href="modules/_steps_sendsrcres_.html"
-                  >&quot;steps/send<wbr />Src<wbr />Res&quot;</a
-                >
-              </li>
-              <li class="tsd-kind-module">
-                <a href="modules/_types_.html">&quot;types&quot;</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="tsd-navigation secondary menu-sticky">
-            <ul class="before-current"></ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <footer class="with-border-bottom">
-      <div class="container">
-        <h2>Legend</h2>
-        <div class="tsd-legend-group">
-          <ul class="tsd-legend">
-            <li class="tsd-kind-function">
-              <span class="tsd-kind-icon">Function</span>
-            </li>
-          </ul>
-          <ul class="tsd-legend">
-            <li class="tsd-kind-interface">
-              <span class="tsd-kind-icon">Interface</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <div class="container tsd-generator">
-      <p>
-        Generated using
-        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
-      </p>
-    </div>
-    <div class="overlay"></div>
-    <script src="assets/js/main.js"></script>
-  </body>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing</h2>
+				</a>
+				<p><a href="https://github.com/cmorten/oak-http-proxy/blob/main/.github/CONTRIBUTING.md">Contributing guide</a></p>
+				<hr>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>oak-http-proxy is licensed under the <a href="./LICENSE.md">MIT License</a>.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_proxy_.html">&quot;proxy&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_requestoptions_.html">&quot;request<wbr>Options&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_steps_buildproxyreqinit_.html">&quot;steps/build<wbr>Proxy<wbr>Req<wbr>Init&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_steps_buildproxyurl_.html">&quot;steps/build<wbr>Proxy<wbr>Url&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_steps_copyproxyresheaderstouserres_.html">&quot;steps/copy<wbr>Proxy<wbr>Res<wbr>Headers<wbr>ToUser<wbr>Res&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_steps_filtersrcreq_.html">&quot;steps/filter<wbr>Src<wbr>Req&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_steps_handleproxyerrors_.html">&quot;steps/handle<wbr>Proxy<wbr>Errors&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_steps_sendsrcres_.html">&quot;steps/send<wbr>Src<wbr>Res&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_.html">&quot;types&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
 </html>
