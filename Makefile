@@ -11,7 +11,7 @@ ci:
 	@make test
 
 deps:
-	@npm install -g typescript typedoc@0.19.2
+	@npm install -g typescript@4 typedoc@0.19.2
 
 doc:
 	@deno doc ./mod.ts
@@ -23,7 +23,7 @@ fmt-check:
 	@deno fmt --check ${FILES_TO_FORMAT}
 
 lint:
-	@deno lint --unstable ${FILES_TO_FORMAT}
+	@deno lint ${FILES_TO_FORMAT}
 
 precommit:
 	@make typedoc

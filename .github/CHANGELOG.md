@@ -1,5 +1,8 @@
 # ChangeLog
 
+For the latest changes, please refer to the
+[releases page](https://github.com/cmorten/oak-http-proxy/releases).
+
 ## [2.1.0] - 29-08-2022
 
 - feat: support Deno `1.25.0` and std `0.153.0`
